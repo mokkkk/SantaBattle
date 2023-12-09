@@ -2,20 +2,21 @@
 #
 # ジングル・ベル 使用開始処理
 
-# 動物を召喚
-    execute at @s anchored eyes positioned ^ ^ ^1 run summon goat ^ ^ ^2.8 {Tags:["Temp.Start","Mob.SledMob"],NoGravity:1b,Silent:1b,NoAI:1b,Invulnerable:1b}
-    scoreboard players operation @e[type=goat,tag=Temp.Start] player.id = @s player.id
-# ソリを召喚
-    execute at @s anchored eyes positioned ^ ^ ^2 run summon minecart ^ ^ ^ {Tags:["Temp.Start"],NoGravity:1b,Silent:1b}
+# ソリ召喚
+    execute at @s rotated ~ 0 anchored eyes positioned ^ ^ ^2 run summon minecart ^ ^ ^ {Tags:["Temp.Start"],NoGravity:1b,Silent:1b}
+    execute as @e[type=minecart,tag=Temp.Start] positioned as @s run tp @s ~ ~ ~ ~ ~
     scoreboard players operation @e[type=minecart,tag=Temp.Start] player.id = @s player.id
+    team join NoCollition @e[type=minecart,tag=Temp.Start]
+# 動物召喚
+    function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/goat
 # 動物とソリをリードで繋ぐ
-    execute as @e[type=goat,tag=Temp.Start] run data modify entity @s Leash.UUID set from entity @e[type=minecart,tag=Temp.Start,limit=1] UUID
-    
+    execute as @e[tag=Mob.SledMob,tag=Temp.Start] run data modify entity @s Leash.UUID set from entity @e[type=minecart,tag=Temp.Start,limit=1] UUID
+
 # プレイヤーをソリに載せる
     ride @s mount @e[type=minecart,tag=Temp.Start,sort=nearest,limit=1]
 
 # 演出
-    execute positioned ^ ^1 ^2 rotated ~ 0 run function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/effect
+    execute rotated ~ 0 positioned ^ ^1 ^2 run function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/effect
 
 # 終了
     tag @e[tag=Temp.Start] remove Temp.Start
