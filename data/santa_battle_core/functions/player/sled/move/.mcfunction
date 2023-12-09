@@ -2,8 +2,11 @@
 #
 # ソリの移動処理
 
+# 角度計算
+    function santa_battle_core:player/sled/move/apply_rotation
+
 # 動物を移動
-    execute positioned ^ ^0.1 ^2.8 as @e[tag=Mob.SledMob,tag=Temp.Target] run tp @s ~ ~ ~ ~ ~
+    execute on vehicle on passengers if entity @s[tag=Mob.SledRotationMarker] rotated as @s on vehicle positioned ^ ^ ^2.8 as @e[tag=Mob.SledMob,tag=Temp.Target] run tp @s ~ ~ ~ ~ ~
 
 # 速度計算
     scoreboard players operation @s player.sled_status.current_speed += @s player.sled_status.acceleration
@@ -24,7 +27,7 @@
     execute if score @s player.sled_particle_timer matches 4 as @e[type=minecart,tag=Temp.Target] at @s rotated ~ 0 run function santa_battle_core:player/sled/move/particle
     execute if score @s player.sled_particle_timer matches 6 as @e[type=minecart,tag=Temp.Target] at @s rotated ~ 0 run function santa_battle_core:player/sled/move/particle
 
-    tellraw @a ["",{"text":"X:"},{"score":{"name":"@s","objective":"player.sled_status.current_speed"}}]
+    # tellraw @a ["",{"text":"SPEED:"},{"score":{"name":"@s","objective":"player.sled_status.current_speed"}}]
 
 # 終了
     data remove storage santa_battle_core: Temp

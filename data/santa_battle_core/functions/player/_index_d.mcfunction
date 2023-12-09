@@ -15,6 +15,7 @@
 
 # Mob関連：Mobのみに付与する
     #declare tag Mob.SledMob ソリの牽引動物
+    #declare tag Mob.SledRotationMarker ソリの移動方向決定用Marker
     #declare tag Mob.ParticleMarker 演出用marker
 
 # Storage
