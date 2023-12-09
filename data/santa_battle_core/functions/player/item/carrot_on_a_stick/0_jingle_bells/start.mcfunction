@@ -10,7 +10,8 @@
     team join NoCollition @e[type=minecart,tag=Temp.Start]
     team join NoCollition @e[type=marker,tag=Mob.SledRotationMarker,tag=Temp.Start]
 # 動物召喚
-    function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/goat
+    execute if score @s player.sled_type matches 1 run function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/goat
+    execute if score @s player.sled_type matches 2 run function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/allay
 # 動物とソリをリードで繋ぐ
     execute as @e[tag=Mob.SledMob,tag=Temp.Start] run data modify entity @s Leash.UUID set from entity @e[type=minecart,tag=Temp.Start,limit=1] UUID
 

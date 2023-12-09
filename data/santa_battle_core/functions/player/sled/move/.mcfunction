@@ -2,18 +2,17 @@
 #
 # ソリの移動処理
 
+# 速度計算
+    scoreboard players operation @s player.sled_status.current_speed += @s player.sled_status.acceleration
+    execute if score @s player.sled_status.current_speed > @s player.sled_status.max_speed run scoreboard players operation @s player.sled_status.current_speed = @s player.sled_status.max_speed
+# storageにステータスを保存
+    execute store result storage santa_battle_core: Temp.Speed float 0.001 run scoreboard players get @s player.sled_status.current_speed
+
 # 角度計算
     function santa_battle_core:player/sled/move/apply_rotation
 
 # 動物を移動
-    execute on vehicle on passengers if entity @s[tag=Mob.SledRotationMarker] rotated as @s on vehicle positioned ^ ^ ^2.8 as @e[tag=Mob.SledMob,tag=Temp.Target] run tp @s ~ ~ ~ ~ ~
-
-# 速度計算
-    scoreboard players operation @s player.sled_status.current_speed += @s player.sled_status.acceleration
-    execute if score @s player.sled_status.current_speed > @s player.sled_status.max_speed run scoreboard players operation @s player.sled_status.current_speed = @s player.sled_status.max_speed
-
-# storageにステータスを保存
-    execute store result storage santa_battle_core: Temp.Speed float 0.001 run scoreboard players get @s player.sled_status.current_speed
+    execute on vehicle on passengers if entity @s[tag=Mob.SledRotationMarker] rotated as @s on vehicle positioned as @s as @e[tag=Mob.SledMob,tag=Temp.Target] run function santa_battle_core:player/sled/move/animal with storage santa_battle_core: Temp
 
 # ソリの速度適用
     function santa_battle_core:player/sled/move/m_apply_speed with storage santa_battle_core: Temp
@@ -27,6 +26,16 @@
     execute if score @s player.sled_particle_timer matches 4 as @e[type=minecart,tag=Temp.Target] at @s rotated ~ 0 run function santa_battle_core:player/sled/move/particle
     execute if score @s player.sled_particle_timer matches 6 as @e[type=minecart,tag=Temp.Target] at @s rotated ~ 0 run function santa_battle_core:player/sled/move/particle
 
+# 時速計算
+    scoreboard players operation #km_h const = @s player.sled_status.current_speed
+    scoreboard players operation #km_h const *= #const_20 const
+    scoreboard players operation #km_h const *= #const_3600 const
+    scoreboard players operation #km_h const /= #const_1000 const
+    execute store result score #km_h_s const run scoreboard players operation #km_h const /= #const_60 const
+    scoreboard players operation #km_h const /= #const_1000 const
+    scoreboard players operation #km_h_s const %= #const_1000 const
+
+    title @s actionbar [{"text":"SPEED:","color": "red"},{"score":{"name":"#km_h","objective":"const"}},{"text":"."},{"score":{"name":"#km_h_s","objective":"const"}},{"text":"km/h"}]
     # tellraw @a ["",{"text":"SPEED:"},{"score":{"name":"@s","objective":"player.sled_status.current_speed"}}]
 
 # 終了

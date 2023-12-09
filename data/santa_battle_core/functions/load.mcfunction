@@ -5,8 +5,10 @@
 # スコア定義
 
 # 共通処理用
+    scoreboard objectives add player.function_count dummy
     scoreboard objectives add player.timer dummy
     scoreboard objectives add player.id dummy
+    scoreboard objectives add const dummy
 
 # プレイヤー行動検知
     scoreboard objectives add player.used.coas minecraft.used:minecraft.carrot_on_a_stick
@@ -25,3 +27,11 @@
 
 # 0 0 0 地点をforceload
     forceload add 0 0 1 1
+
+# 定数定義
+    scoreboard players set #const_2 const 2
+    scoreboard players set #const_20 const 20
+    scoreboard players set #const_100 const 100
+    scoreboard players set #const_60 const 60
+    scoreboard players set #const_3600 const 3600
+    scoreboard players set #const_1000 const 1000
