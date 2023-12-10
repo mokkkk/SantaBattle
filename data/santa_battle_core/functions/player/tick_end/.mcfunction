@@ -5,3 +5,5 @@
 # タグ消去
     execute if score @s player.used.coas matches 1.. run scoreboard players set @s player.used.coas 0
     execute if entity @s[tag=Player.Used.Coas] run tag @s remove Player.Used.Coas
+    execute if score @s player.used.snowball matches 1.. run scoreboard players set @s player.used.snowball 0
+    execute if entity @s[tag=Player.Used.Snowball] run tag @s remove Player.Used.Snowball

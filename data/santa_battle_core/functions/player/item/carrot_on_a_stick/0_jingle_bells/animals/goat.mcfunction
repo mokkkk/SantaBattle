@@ -11,10 +11,10 @@
     scoreboard players operation @e[type=goat,tag=Temp.Start] player.id = @s player.id
 
 # ステータス設定
-    scoreboard players set @s player.sled_status.min_speed 500
-    scoreboard players set @s player.sled_status.current_speed 500
-    scoreboard players set @s player.sled_status.max_speed 1500
-    scoreboard players set @s player.sled_status.acceleration 10
+    scoreboard players set @s player.sled_status.min_speed 300
+    scoreboard players set @s player.sled_status.current_speed 300
+    scoreboard players set @s player.sled_status.max_speed 1300
+    scoreboard players set @s player.sled_status.acceleration 20
 
 # 演出
-    playsound entity.goat.ambient master @a ~ ~ ~ 2 2
+    playsound entity.goat.ambient master @a ~ ~ ~ 2 1

@@ -13,8 +13,8 @@
 # ステータス設定
     scoreboard players set @s player.sled_status.min_speed 100
     scoreboard players set @s player.sled_status.current_speed 100
-    scoreboard players set @s player.sled_status.max_speed 2000
-    scoreboard players set @s player.sled_status.acceleration 50
+    scoreboard players set @s player.sled_status.max_speed 1600
+    scoreboard players set @s player.sled_status.acceleration 10
 
 # 演出
-    playsound entity.allay.ambient_with_item master @a ~ ~ ~ 2 2
+    playsound entity.allay.ambient_with_item master @a ~ ~ ~ 2 1

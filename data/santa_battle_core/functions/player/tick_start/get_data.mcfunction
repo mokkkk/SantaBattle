@@ -4,3 +4,6 @@
 
 # ニンジン棒使用
     execute if score @s player.used.coas matches 1.. run tag @s add Player.Used.Coas
+
+# 雪玉使用
+    execute if score @s player.used.snowball matches 1.. run tag @s add Player.Used.Snowball
