@@ -43,5 +43,4 @@
     scoreboard players set #const_60 const 60
     scoreboard players set #const_3600 const 3600
     scoreboard players set #const_1000 const 1000
-    scoreboard players set #const_g const 980
     scoreboard players set #const_minus const -1

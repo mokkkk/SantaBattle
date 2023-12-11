@@ -8,6 +8,8 @@
     #declare tag Temp.Start 処理開始時のEntity判別用一時タグ
     #declare tag Temp.Target 紐づけ対象Entity判別用一時タグ
     #declare tag Temp.Calc 計算用Entity判別用一時タグ
+    #declare tag Temp.Calc.PlayerSpeed 計算用Entity判別用一時タグ
+    #declare tag Temp.Hit 着弾判定用一時タグ
 
 # Player関連：Playerのみに付与する
     #declare tag Player.Used.Coas プレイヤーがニンジン棒を使用した

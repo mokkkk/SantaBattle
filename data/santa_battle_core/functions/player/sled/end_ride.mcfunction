@@ -13,5 +13,6 @@
     scoreboard players remove @s player.sled_summon_count 1
 
 # 終了
+    scoreboard players set @s player.sled_status.current_speed 0
     tag @s remove Player.OnSled
     scoreboard players reset #temporary_player_id

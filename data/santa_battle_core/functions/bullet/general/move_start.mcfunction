@@ -1,4 +1,4 @@
-#> santa_battle_core:bullet/move_start
+#> santa_battle_core:bullet/general/move_start
 #
 # 弾 共通移動処理
 
@@ -15,7 +15,7 @@
     execute store result storage santa_battle_core: Temp.Speed.Z float 0.001 run scoreboard players get @s bullet.status.speed_z
 
 # 移動
-    function santa_battle_core:bullet/m_move_apply with storage santa_battle_core: Temp.Speed
+    function santa_battle_core:bullet/general/m_move_apply with storage santa_battle_core: Temp.Speed
 
 # 終了
     data remove storage santa_battle_core: Temp.Speed

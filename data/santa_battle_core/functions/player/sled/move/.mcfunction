@@ -37,7 +37,6 @@
     scoreboard players operation #km_h_s const %= #const_1000 const
 
     title @s actionbar [{"text":"SPEED:","color": "red"},{"score":{"name":"#km_h","objective":"const"}},{"text":"."},{"score":{"name":"#km_h_s","objective":"const"}},{"text":"km/h"}]
-    # tellraw @a ["",{"text":"SPEED:"},{"score":{"name":"@s","objective":"player.sled_status.current_speed"}}]
 
 # 終了
     data remove storage santa_battle_core: Temp
