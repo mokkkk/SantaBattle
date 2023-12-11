@@ -11,6 +11,7 @@
     scoreboard objectives add const dummy
 
 # プレイヤー行動検知
+    scoreboard objectives add player.flag.death deathCount
     scoreboard objectives add player.used.coas minecraft.used:minecraft.carrot_on_a_stick
     scoreboard objectives add player.used.snowball minecraft.used:minecraft.snowball
 

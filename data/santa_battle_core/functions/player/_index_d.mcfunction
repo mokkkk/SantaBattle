@@ -10,8 +10,10 @@
     #declare tag Temp.Calc 計算用Entity判別用一時タグ
     #declare tag Temp.Calc.PlayerSpeed 計算用Entity判別用一時タグ
     #declare tag Temp.Hit 着弾判定用一時タグ
+    #declare tag Temp.Killer 攻撃者判別用一時タグ
 
 # Player関連：Playerのみに付与する
+    #declare tag Player.Flag.Death プレイヤーが死亡した
     #declare tag Player.Used.Coas プレイヤーがニンジン棒を使用した
     #declare tag Player.Used.Snowball プレイヤーが雪玉を使用した
     #declare tag Player.OnSled プレイヤーがソリに乗っている

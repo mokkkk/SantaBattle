@@ -8,5 +8,9 @@
 # 通常弾
     function santa_battle_core:player/item/snowball/0_normal/start with storage santa_battle_core: Temp
 
+# わずかに減速
+    execute if entity @s[tag=Player.OnSled] run scoreboard players remove @s player.sled_status.current_speed 50
+    execute if entity @s[tag=Player.OnSled] if score @s player.sled_status.current_speed < @s player.sled_status.min_speed run scoreboard players operation @s player.sled_status.current_speed = @s player.sled_status.min_speed
+
 # 終了
     data remove storage santa_battle_core: Temp
