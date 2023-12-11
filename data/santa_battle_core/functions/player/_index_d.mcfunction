@@ -20,6 +20,9 @@
 
 # Mob関連：Mobのみに付与する
     #declare tag Mob.SledMob ソリの牽引動物
+    #declare tag Mob.SledMob.Main ソリの牽引動物・メイン
+    #declare tag Mob.SledMob.Sub1 ソリの牽引動物・サブ1
+    #declare tag Mob.SledMob.Sub2 ソリの牽引動物・サブ2
     #declare tag Mob.SledRotationMarker ソリの移動方向決定用Marker
     #declare tag Mob.ParticleMarker 演出用marker
     #declare tag Mob.Bullet 弾系Mobの共通タグ

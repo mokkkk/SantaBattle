@@ -23,6 +23,7 @@
     scoreboard objectives add player.sled_status.current_speed dummy
     scoreboard objectives add player.sled_status.max_speed dummy
     scoreboard objectives add player.sled_status.acceleration dummy
+    scoreboard objectives add player.sled_status.attack_deceleration dummy
 
 # 弾の処理用
     scoreboard objectives add bullet.timer dummy
