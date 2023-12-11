@@ -10,7 +10,7 @@
 
 # 攻撃元取得
     execute as @a if score @s player.id = #temp player.id run tag @s add Temp.Killer
-    tellraw @a [{"text": "<"},{"selector":"@a[tag=Temp.Killer]"},{"text": "> が <"},{"selector":"@s"},{"text": "> を屠りました"}]
+    tellraw @a [{"text": "<"},{"selector":"@a[tag=Temp.Killer]"},{"text": "> が <"},{"selector":"@s"},{"text": "> に死をプレゼント！"}]
 
 # 終了
     tag @a remove Temp.Killer
