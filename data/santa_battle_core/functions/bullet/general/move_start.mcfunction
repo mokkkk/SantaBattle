@@ -2,6 +2,12 @@
 #
 # 弾 共通移動処理
 
+# 減速
+    scoreboard players operation @s bullet.status.speed_x *= @s bullet.status.speed_deceleration_mult
+    scoreboard players operation @s bullet.status.speed_x /= #const_1000 const
+    scoreboard players operation @s bullet.status.speed_z *= @s bullet.status.speed_deceleration_mult
+    scoreboard players operation @s bullet.status.speed_z /= #const_1000 const
+
 # 重力加速
     scoreboard players operation #temp_speed_y const = @s bullet.timer
     scoreboard players operation #temp_speed_y const *= @s bullet.status.speed_g
