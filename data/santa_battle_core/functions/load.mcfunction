@@ -32,6 +32,10 @@
         scoreboard objectives add game.phase dummy
         scoreboard objectives add game.timer dummy
 
+# ゲームフェーズ設定
+    execute unless score #game_manager game.phase matches 1.. run scoreboard players set #game_manager game.phase 1
+    execute unless score #game_manager game.timer matches 0.. run scoreboard players set #game_manager game.timer 0
+
 # プレイヤーID未設定のプレイヤーにIDを割り当てる
     execute as @a unless score @s player.id matches 0.. run function santa_battle_core:player/load
 

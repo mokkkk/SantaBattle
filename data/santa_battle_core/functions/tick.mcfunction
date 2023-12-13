@@ -2,6 +2,9 @@
 #
 # 毎tick実行される処理群
 
+# ゲーム処理
+    function santa_battle_core:game_main/tick
+
 # プレイヤー処理
     execute as @a at @s run function santa_battle_core:player/
 

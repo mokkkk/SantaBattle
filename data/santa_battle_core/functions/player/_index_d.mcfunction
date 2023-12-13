@@ -31,3 +31,6 @@
 
 # Storage
     #declare storage santa_battle_core: 基本storage
+
+# Score Holder
+    #declare score_holder #game_manager ゲーム全体の処理用
