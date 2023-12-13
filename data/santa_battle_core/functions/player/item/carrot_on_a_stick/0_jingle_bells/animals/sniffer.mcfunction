@@ -1,6 +1,7 @@
 #> santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/sniffer
 #
 # ジングル・ベル 使用開始処理
+# スニッファー：最高速が遅く，取り扱いやすい
 
 # 動物を召喚
     execute at @s anchored eyes positioned ^ ^ ^1 run summon sniffer ^ ^ ^2.8 {Tags:["Temp.Start","Mob.SledMob","Mob.SledMob.Main"],NoGravity:1b,Silent:1b,NoAI:1b,Invulnerable:1b}

@@ -27,6 +27,11 @@
     execute if score @s player.sled_particle_timer matches 4 as @e[type=minecart,tag=Temp.Target] at @s rotated ~ 0 run function santa_battle_core:player/sled/move/particle
     execute if score @s player.sled_particle_timer matches 6 as @e[type=minecart,tag=Temp.Target] at @s rotated ~ 0 run function santa_battle_core:player/sled/move/particle
 
+# ニワトリ：特殊減速処理
+    execute if score @s player.sled_particle_timer matches 2 if score @s player.sled_type matches 6 if score @s player.sled_status.max_speed matches 500.. run scoreboard players remove @s player.sled_status.max_speed 4
+    execute if score @s player.sled_particle_timer matches 3 if score @s player.sled_type matches 6 if score @s player.sled_status.max_speed matches 500.. run scoreboard players remove @s player.sled_status.max_speed 4
+    execute if score @s player.sled_particle_timer matches 1 if score @s player.sled_type matches 6 if score @s player.sled_status.max_speed matches ..800 as @e[tag=Mob.SledMob.Main,tag=Temp.Target] at @s positioned ~ ~1 ~ run particle angry_villager ~ ~ ~ 0.5 0.5 0.5 0 1
+
 # 時速計算
     scoreboard players operation #km_h const = @s player.sled_status.current_speed
     scoreboard players operation #km_h const *= #const_20 const

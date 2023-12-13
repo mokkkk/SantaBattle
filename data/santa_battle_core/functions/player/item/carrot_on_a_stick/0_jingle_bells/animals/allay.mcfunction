@@ -1,6 +1,7 @@
 #> santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/allay
 #
 # ジングル・ベル 使用開始処理
+# アレイ：加速は遅いが，最高速は非常に速い
 
 # 動物を召喚
     execute at @s anchored eyes positioned ^ ^ ^1 run summon allay ^ ^ ^2.8 {Tags:["Temp.Start","Mob.SledMob","Mob.SledMob.Main"],NoGravity:1b,Silent:1b,NoAI:1b,Invulnerable:1b}
