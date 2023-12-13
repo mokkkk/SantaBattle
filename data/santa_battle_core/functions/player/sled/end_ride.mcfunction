@@ -16,7 +16,7 @@
     execute store result storage santa_battle_core: Temp.Speed float 0.001 run scoreboard players get @s player.sled_status.current_speed
 
 # プレイヤー移動
-    function santa_battle_core:player/sled/end/m_apply_player_motion with storage santa_battle_core: Temp
+    execute at @s run function santa_battle_core:player/sled/end/m_apply_player_motion with storage santa_battle_core: Temp
 
 # 終了
     data remove storage santa_battle_core: Temp
