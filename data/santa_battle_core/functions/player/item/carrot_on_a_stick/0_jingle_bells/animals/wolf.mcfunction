@@ -21,10 +21,11 @@
     execute if score @s player.sled_summon_count matches 3.. run scoreboard players set @s player.sled_status.max_speed 1400
     execute if score @s player.sled_summon_count matches 2 run scoreboard players set @s player.sled_status.max_speed 1100
     execute if score @s player.sled_summon_count matches ..1 run scoreboard players set @s player.sled_status.max_speed 750
-    execute if score @s player.sled_summon_count matches 3.. run scoreboard players set @s player.sled_status.acceleration 25
+    execute if score @s player.sled_summon_count matches 3.. run scoreboard players set @s player.sled_status.acceleration 18
     execute if score @s player.sled_summon_count matches 2 run scoreboard players set @s player.sled_status.acceleration 40
     execute if score @s player.sled_summon_count matches ..1 run scoreboard players set @s player.sled_status.acceleration 80
     scoreboard players set @s player.sled_status.attack_deceleration 50
+    scoreboard players set @s player.sled_status.handling 5000
 
 # 演出
     playsound entity.wolf.ambient master @a ~ ~ ~ 2 1

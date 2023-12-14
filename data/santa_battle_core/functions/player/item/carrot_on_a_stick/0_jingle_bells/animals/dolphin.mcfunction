@@ -17,6 +17,7 @@
     scoreboard players set @s player.sled_status.max_speed 1500
     scoreboard players set @s player.sled_status.acceleration 20
     scoreboard players set @s player.sled_status.attack_deceleration 250
+    scoreboard players set @s player.sled_status.handling 5500
 
 # 演出
     playsound entity.dolphin.ambient_water master @a ~ ~ ~ 2 1

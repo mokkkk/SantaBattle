@@ -25,6 +25,7 @@
     #declare tag Mob.SledMob.Sub2 ソリの牽引動物・サブ2
     #declare tag Mob.SledRotationMarker ソリの移動方向決定用Marker
     #declare tag Mob.ParticleMarker 演出用marker
+    #declare tag Mob.ParticleMarker.Death 演出用marker
     #declare tag Mob.Bullet 弾系Mobの共通タグ
     #declare tag Mob.Bullet.Normal 通常弾
     #declare tag Mob.Bullet.IsHitBlock 弾ブロック着弾時

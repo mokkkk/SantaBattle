@@ -17,6 +17,7 @@
     scoreboard players set @s player.sled_status.max_speed 1000
     scoreboard players set @s player.sled_status.acceleration 20
     scoreboard players set @s player.sled_status.attack_deceleration 20
+    scoreboard players set @s player.sled_status.handling 4000
 
 # 演出
     playsound entity.sniffer.scenting master @a ~ ~ ~ 2 1

@@ -8,12 +8,13 @@
     scoreboard players operation @e[tag=Mob.SledMob.Main,tag=Temp.Target] player.sled_status.current_speed = @s player.sled_status.current_speed
 # storageにステータスを保存
     execute store result storage santa_battle_core: Temp.Speed float 0.001 run scoreboard players get @s player.sled_status.current_speed
+    execute store result storage santa_battle_core: Temp.Handling float 0.001 run scoreboard players get @s player.sled_status.handling
 
 # 角度計算
-    execute at @s run function santa_battle_core:player/sled/move/apply_rotation
+    execute at @s run function santa_battle_core:player/sled/move/m_apply_rotation with storage santa_battle_core: Temp
 
 # 動物を移動
-    execute on vehicle on passengers if entity @s[tag=Mob.SledRotationMarker] rotated as @s on vehicle positioned as @s as @e[tag=Mob.SledMob.Main,tag=Temp.Target] run function santa_battle_core:player/sled/move/animal with storage santa_battle_core: Temp
+    execute on vehicle on passengers if entity @s[tag=Mob.SledRotationMarker] rotated as @s on vehicle positioned as @s as @e[tag=Mob.SledMob.Main,tag=Temp.Target] run function santa_battle_core:player/sled/move/animal
 
 # ソリの速度適用
     function santa_battle_core:player/sled/move/m_apply_speed with storage santa_battle_core: Temp

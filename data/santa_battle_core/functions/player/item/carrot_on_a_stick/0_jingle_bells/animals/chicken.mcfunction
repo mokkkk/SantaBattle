@@ -17,6 +17,7 @@
     scoreboard players set @s player.sled_status.max_speed 1600
     scoreboard players set @s player.sled_status.acceleration 80
     scoreboard players set @s player.sled_status.attack_deceleration 50
+    scoreboard players set @s player.sled_status.handling 5000
 
 # 演出
     playsound entity.chicken.death master @a ~ ~ ~ 2 1
