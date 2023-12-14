@@ -16,5 +16,8 @@
     execute if entity @s[tag=Player.OnSled] run scoreboard players operation @s player.sled_status.current_speed -= @s player.sled_status.attack_deceleration
     execute if entity @s[tag=Player.OnSled] if score @s player.sled_status.current_speed < @s player.sled_status.min_speed run scoreboard players operation @s player.sled_status.current_speed = @s player.sled_status.min_speed
 
+# 雪玉補充
+    give @s snowball 1
+
 # 終了
     data remove storage santa_battle_core: Temp

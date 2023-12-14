@@ -10,7 +10,7 @@
     execute store result storage santa_battle_core: Temp.Speed float 0.001 run scoreboard players get @s player.sled_status.current_speed
 
 # 角度計算
-    execute on vehicle at @s on passengers if entity @s[type=player] rotated as @s run function santa_battle_core:player/sled/move/apply_rotation
+    execute at @s run function santa_battle_core:player/sled/move/apply_rotation
 
 # 動物を移動
     execute on vehicle on passengers if entity @s[tag=Mob.SledRotationMarker] rotated as @s on vehicle positioned as @s as @e[tag=Mob.SledMob.Main,tag=Temp.Target] run function santa_battle_core:player/sled/move/animal with storage santa_battle_core: Temp
