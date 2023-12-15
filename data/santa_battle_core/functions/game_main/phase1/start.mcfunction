@@ -8,3 +8,7 @@
 
 # phase変更
     scoreboard players set #game_manager game.phase 1
+
+# ロビーに戻す
+    tp @a 64.0 -57 16.0
+    spawnpoint @a 64 -57 16

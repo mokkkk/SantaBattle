@@ -35,3 +35,6 @@
 
 # Score Holder
     #declare score_holder #game_manager ゲーム全体の処理用
+
+# bossbar
+    #declare bossbar santa_battle_core:timer ゲームタイマー用bossbar

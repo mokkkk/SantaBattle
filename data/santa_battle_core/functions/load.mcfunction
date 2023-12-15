@@ -32,6 +32,9 @@
     # ゲーム全体処理用
         scoreboard objectives add game.phase dummy
         scoreboard objectives add game.timer dummy
+        scoreboard objectives add game.is_hurryup dummy
+    # 設定
+        scoreboard objectives add game.setting.timer dummy
 
 # ゲームフェーズ設定
     execute unless score #game_manager game.phase matches 1.. run scoreboard players set #game_manager game.phase 1
