@@ -17,6 +17,10 @@
 # title設定
     title @a times 0t 100t 5t
 
+# スコア解放
+    scoreboard players reset * player.game_score.kill
+    scoreboard players reset * player.game_score.life
+
 # スコア設定
     scoreboard players set #game_manager game.winner_player_id -1
     scoreboard players set #game_manager game.winner_team_id -1

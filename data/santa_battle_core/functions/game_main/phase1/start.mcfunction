@@ -9,6 +9,8 @@
     tag @a remove Player.Ghost
     tag @a remove Player.Winner
     tag @a remove Player.WinnerTeam
+    tag @a remove Player.Loser
+    tag @a remove Player.Draw
     execute as @a at @s run function santa_battle_core:player/sled/end_ride_without_delta
     scoreboard objectives setdisplay sidebar
 
