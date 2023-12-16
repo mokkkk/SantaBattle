@@ -13,4 +13,3 @@
 
 # その他処理
     execute as @e[type=marker,tag=Mob.ParticleMarker] at @s run function santa_battle_core:other/marker_particle
-    execute as @e[type=marker,tag=Mob.ParticleMarker.Death] at @s run function santa_battle_core:other/marker_death_particle

@@ -14,7 +14,7 @@
 # 勝敗表示
     execute if score #game_manager game.timer matches 480 run title @a times 0t 160t 10t
     execute if score #game_manager game.timer matches 480 run title @a title {"text": "YOU WIN!!","color": "gold","bold": true}
-    execute if score #game_manager game.timer matches 480 run title @a subtitle {"text": "世界を幸せにできるのは君だ!!!","color": "gold","bold": true}
+    execute if score #game_manager game.timer matches 480 run title @a subtitle {"text": "夕飯はドン勝だ!!!","color": "gold","bold": true}
 
 # phase変更
     execute if score #game_manager game.timer matches ..0 run function santa_battle_core:game_main/phase1/start

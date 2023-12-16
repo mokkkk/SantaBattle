@@ -20,3 +20,8 @@
 
 # title設定
     title @a times 5t 100t 5t
+
+# スコア設定
+    scoreboard players set #game_manager game.winner_player_id -1
+    scoreboard players set #game_manager game.winner_team_id -1
+    scoreboard players set #game_manager game.max_score 0
