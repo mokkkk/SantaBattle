@@ -27,6 +27,7 @@
     #declare tag Player.BlueTeam
     #declare tag Player.GreenTeam
     #declare tag Player.YellowTeam
+    #declare tag Player.TeamGhost
 
 # Mob関連：Mobのみに付与する
     #declare tag Mob.SledMob ソリの牽引動物
@@ -40,10 +41,6 @@
     #declare tag Mob.Bullet.Normal 通常弾
     #declare tag Mob.Bullet.IsHitBlock 弾ブロック着弾時
     #declare tag Mob.TeamDummyEntity チーム点数処理用のダミーエンティティ
-    #declare tag Mob.TeamRed
-    #declare tag Mob.TeamBlue
-    #declare tag Mob.TeamGreen
-    #declare tag Mob.TeamYellow
 
 # Storage
     #declare storage santa_battle_core: 基本storage
