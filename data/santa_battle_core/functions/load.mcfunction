@@ -25,7 +25,7 @@
         scoreboard objectives add player.sled_status.handling dummy
     # その他プレイヤー用スコア
         scoreboard objectives add player.game_score.kill dummy {"text": "現在のポイント","color": "gold","bold": true}
-        scoreboard objectives add player.game_score.life dummy
+        scoreboard objectives add player.game_score.life dummy {"text": "残り復活回数","color": "gold","bold": true}
         scoreboard objectives add player.invulnerable_timer dummy
     # 弾の処理用
         scoreboard objectives add bullet.timer dummy

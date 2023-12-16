@@ -19,6 +19,8 @@
     #declare tag Player.Used.Snowball プレイヤーが雪玉を使用した
     #declare tag Player.OnSled プレイヤーがソリに乗っている
     #declare tag Player.Winner 現状の勝者
+    #declare tag Player.Loser 現状の敗者
+    #declare tag Player.Draw 現状の引分者
     #declare tag Player.WinnerTeam 現状の勝利チーム
     #declare tag Player.Ghost 観戦者・または残機がなくなったプレイヤー
 
@@ -33,6 +35,11 @@
     #declare tag Mob.Bullet 弾系Mobの共通タグ
     #declare tag Mob.Bullet.Normal 通常弾
     #declare tag Mob.Bullet.IsHitBlock 弾ブロック着弾時
+    #declare tag Mob.TeamDummyEntity チーム点数処理用のダミーエンティティ
+    #declare tag Mob.TeamRed
+    #declare tag Mob.TeamBlue
+    #declare tag Mob.TeamGreen
+    #declare tag Mob.TeamYellow
 
 # Storage
     #declare storage santa_battle_core: 基本storage

@@ -10,6 +10,7 @@
     tag @a remove Player.Winner
     tag @a remove Player.WinnerTeam
     execute as @a at @s run function santa_battle_core:player/sled/end_ride_without_delta
+    scoreboard objectives setdisplay sidebar
 
 # ロビーに戻す
     gamemode adventure @a

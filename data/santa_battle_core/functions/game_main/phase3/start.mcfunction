@@ -32,5 +32,15 @@
     scoreboard players set @a player.game_score.kill 0
     scoreboard players operation @a player.game_score.life = #game_manager game.setting.max_life
 
+# ダミーエンティティ召喚
+    execute if score #game_manager game.setting.is_team matches 1 run summon marker 0 0 0 {Tags:["Mob.TeamDummyEntity","Mob.TeamRed"],CustomName:'{"text":"赤チーム","color":"red","bold":true}'}
+    execute if score #game_manager game.setting.is_team matches 1 run summon marker 0 0 0 {Tags:["Mob.TeamDummyEntity","Mob.TeamBlue"],CustomName:'{"text":"青チーム","color":"blue","bold":true}'}
+    execute if score #game_manager game.setting.is_team matches 1 run summon marker 0 0 0 {Tags:["Mob.TeamDummyEntity","Mob.TeamGreen"],CustomName:'{"text":"緑チーム","color":"green","bold":true}'}
+    execute if score #game_manager game.setting.is_team matches 1 run summon marker 0 0 0 {Tags:["Mob.TeamDummyEntity","Mob.TeamYellow"],CustomName:'{"text":"黄チーム","color":"yellow","bold":true}'}
+
+# スコア表示
+    execute unless score #game_manager game.setting.is_life matches 1.. run scoreboard objectives setdisplay sidebar player.game_score.kill
+    execute if score #game_manager game.setting.is_life matches 1.. run scoreboard objectives setdisplay sidebar player.game_score.life
+
 # TODO:バトルフィールドに移動
     execute as @a at @s run function santa_battle_core:player/sled/end_ride_without_delta
