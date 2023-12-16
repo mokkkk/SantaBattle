@@ -17,3 +17,8 @@
     execute if predicate santa_battle_core:player/interaction/teammode run title @s actionbar {"text": "「試合形式を個人戦・チーム戦から選択する。」","color": "aqua","bold": true}
     execute if predicate santa_battle_core:player/interaction/timer run title @s actionbar {"text": "「試合の制限時間を設定する。」","color": "aqua","bold": true}
     execute if predicate santa_battle_core:player/interaction/life run title @s actionbar {"text": "「プレイヤーの復活回数を設定する。<<無制限>>以外の場合、他プレイヤーを全員倒した者が勝者となる。」","color": "aqua","bold": true}
+
+# プリセットのヘルプ
+    execute if predicate santa_battle_core:player/interaction/preset_team run title @s actionbar {"text": "「ゲームルールのプリセットを適用する。仲間と協力して敵を倒せ。」","color": "aqua","bold": true}
+    execute if predicate santa_battle_core:player/interaction/preset_free run title @s actionbar {"text": "「ゲームルールのプリセットを適用する。周りはすべて敵だ。」","color": "aqua","bold": true}
+    execute if predicate santa_battle_core:player/interaction/preset_survival run title @s actionbar {"text": "「ゲームルールのプリセットを適用する。最後に生き残るのは誰だ。」","color": "aqua","bold": true}

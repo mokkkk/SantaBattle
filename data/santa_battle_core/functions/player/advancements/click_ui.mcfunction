@@ -20,6 +20,11 @@
     execute if entity @s[tag=vaDisplay_Timer] run function santa_battle_core:game_main/phase1/settings/timer
     execute if entity @s[tag=vaDisplay_Life] run function santa_battle_core:game_main/phase1/settings/life
 
+# プリセット
+    execute if entity @s[tag=vaDisplay_Preset_TeamDeathmatch] run function santa_battle_core:game_main/phase1/settings/preset_teambattle
+    execute if entity @s[tag=vaDisplay_Preset_FreeBattle] run function santa_battle_core:game_main/phase1/settings/preset_freebattle
+    execute if entity @s[tag=vaDisplay_Preset_Survival] run function santa_battle_core:game_main/phase1/settings/preset_deathmatch
+
 # 終了
     execute if data entity @s interaction run data remove entity @s interaction
     tag @a[tag=vaInteracted] remove vaInteracted

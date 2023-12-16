@@ -10,11 +10,9 @@
 
 # 通知
     execute as @a at @s run playsound ui.button.click master @s ~ ~ ~ 1 2
-    title @a actionbar [{"text": "【プリセット","color": "light_purple","bold": true},{"text":"「デスマッチ」","color": "red"},{"text":"を適用しました】","color": "light_purple","bold": true}]
+    title @a actionbar [{"text": "【プリセット","color": "white","bold": true},{"text":"<<サバイバル>>","color": "green"},{"text":"に設定しました】","color": "white","bold": true}]
 
 # UI更新
-    function santa_battle_core:game_main/phase1/settings/m_enable_team_apply with storage santa_battle_core: Data.Ui.EnableTeam.Pos
-    function santa_battle_core:game_main/phase1/settings/m_timer_apply with storage santa_battle_core: Data.Ui.Timer.Pos
-    function santa_battle_core:game_main/phase1/settings/m_life_apply with storage santa_battle_core: Data.Ui.Life.Pos
-
-# setblock ~ ~1 ~ dark_oak_wall_sign[facing=west]{front_text:{messages:['{"text":""}','{"text":"ルールプリセット","bold":true,"color":"white"}','{"text":"「デスマッチ」","color":"red","bold":true,"underlined":true,"clickEvent":{"action":"run_command","value":"/function santa_battle_core:game_main/phase1/settings/preset_deathmatch"}}','{"text":""}']}} replace
+    execute as @e[tag=vaDisplay_TeamMode] on passengers if entity @s[tag=vaDisplay_Lore] run function santa_battle_core:game_main/phase1/settings/m_enable_team_apply
+    execute as @e[tag=vaDisplay_Timer] on passengers if entity @s[tag=vaDisplay_Lore] run function santa_battle_core:game_main/phase1/settings/m_timer_apply
+    execute as @e[tag=vaDisplay_Life] on passengers if entity @s[tag=vaDisplay_Lore] run function santa_battle_core:game_main/phase1/settings/m_life_apply
