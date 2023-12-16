@@ -12,6 +12,7 @@
     #declare tag Temp.Hit 着弾判定用一時タグ
     #declare tag Temp.Killer 攻撃者判別用一時タグ
     #declare tag Temp.Winner 勝者更新判別用一時タグ
+    #declare tag Temp.SameRotation 角度変更検知用一時タグ
 
 # Player関連：Playerのみに付与する
     #declare tag Player.Flag.Death プレイヤーが死亡した

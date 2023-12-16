@@ -32,6 +32,9 @@
     execute if score @s player.sled_particle_timer matches 2 if score @s player.sled_type matches 6 if score @s player.sled_status.max_speed matches 500.. run scoreboard players remove @s player.sled_status.max_speed 4
     execute if score @s player.sled_particle_timer matches 3 if score @s player.sled_type matches 6 if score @s player.sled_status.max_speed matches 500.. run scoreboard players remove @s player.sled_status.max_speed 4
     execute if score @s player.sled_particle_timer matches 1 if score @s player.sled_type matches 6 if score @s player.sled_status.max_speed matches ..800 as @e[tag=Mob.SledMob.Main,tag=Temp.Target] at @s positioned ~ ~1 ~ run particle angry_villager ~ ~ ~ 0.5 0.5 0.5 0 1
+# スケルトン：特殊減速処理
+    execute if entity @s[tag=!Temp.SameRotation] if score @s player.sled_type matches 7 run scoreboard players remove @s player.sled_status.current_speed 200
+    execute if score @s player.sled_type matches 7 if score @s player.sled_status.current_speed matches ..-301 run scoreboard players set @s player.sled_status.current_speed -300
 
 # 時速計算
     scoreboard players operation #km_h const = @s player.sled_status.current_speed
@@ -45,4 +48,5 @@
     title @s actionbar [{"text":"SPEED:","color": "red"},{"score":{"name":"#km_h","objective":"const"}},{"text":"."},{"score":{"name":"#km_h_s","objective":"const"}},{"text":"km/h"}]
 
 # 終了
+    tag @s remove Temp.SameRotation
     data remove storage santa_battle_core: Temp

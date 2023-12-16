@@ -8,8 +8,8 @@
     execute if predicate santa_battle_core:player/interaction/sniffer run title @s actionbar {"text": "「スピードは遅いが、加速が速く曲がりやすい。」","color": "aqua","bold": true}
     execute if predicate santa_battle_core:player/interaction/dolphine run title @s actionbar {"text": "「スピード・加速ともに高性能。しかし、攻撃時に大きく減速する。」","color": "aqua","bold": true}
     execute if predicate santa_battle_core:player/interaction/wolf run title @s actionbar {"text": "「スピードが速く、加速が遅い。召喚する毎に頭数が減り、スピードが遅くなる代わりに加速が速くなる。」","color": "aqua","bold": true}
-    execute if predicate santa_battle_core:player/interaction/chicken run title @s actionbar {"text": "「曲がりにくいが、スピードも加速もトップクラス。しかしスタミナは無い。」","color": "aqua","bold": true}
-    execute if predicate santa_battle_core:player/interaction/skeleton run title @s actionbar {"text": "「かつてサンタが愛した相棒。未実装。」","color": "aqua","bold": true}
+    execute if predicate santa_battle_core:player/interaction/chicken run title @s actionbar {"text": "「曲がりにくいが、スピードも加速もトップクラス。しかしスタミナが無いため、すぐに疲れる。」","color": "aqua","bold": true}
+    execute if predicate santa_battle_core:player/interaction/skeleton run title @s actionbar {"text": "「かつてサンタだった者たち。曲がりやすく，スピードも最速だが，急に角度を変えるとへそを曲げる。」","color": "aqua","bold": true}
     execute if predicate santa_battle_core:player/interaction/random run title @s actionbar {"text": "「なんだかよくわからない生物。召喚のたびに性能がランダムで変わる。」","color": "aqua","bold": true}
 
 # 設定のヘルプ

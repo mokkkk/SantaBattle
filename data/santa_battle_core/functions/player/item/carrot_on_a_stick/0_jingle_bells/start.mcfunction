@@ -19,6 +19,7 @@
     execute if score @s player.sled_type matches 4 run function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/dolphin
     execute if score @s player.sled_type matches 5 run function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/wolf
     execute if score @s player.sled_type matches 6 run function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/chicken
+    execute if score @s player.sled_type matches 7 run function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/skeleton
 # 動物とソリをリードで繋ぐ
     execute as @e[tag=Mob.SledMob,tag=Temp.Start] run data modify entity @s Leash.UUID set from entity @e[type=minecart,tag=Temp.Start,limit=1] UUID
 
