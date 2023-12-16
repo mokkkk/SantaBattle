@@ -15,5 +15,8 @@
 # スコアリセット
     scoreboard players set @s player.sled_summon_count 3
 
+# 無敵時間付与：5秒
+    scoreboard players set @s player.invulnerable_timer 100
+
 # タグリセット
     tag @s remove Player.OnSled

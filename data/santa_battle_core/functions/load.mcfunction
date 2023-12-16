@@ -26,6 +26,7 @@
     # その他プレイヤー用スコア
         scoreboard objectives add player.game_score.kill dummy
         scoreboard objectives add player.game_score.life dummy
+        scoreboard objectives add player.invulnerable_timer dummy
     # 弾の処理用
         scoreboard objectives add bullet.timer dummy
         scoreboard objectives add bullet.status.speed_x dummy
@@ -53,9 +54,13 @@
 
 # チーム
     team add redTeam {"text": "赤チーム - 真紅の饗宴","color": "red"}
-    team add greenTeam {"text": "緑チーム - 翠緑の薫風","color": "green"}
     team add blueTeam {"text": "青チーム - 深海の抱擁","color": "blue"}
+    team add greenTeam {"text": "緑チーム - 翠緑の薫風","color": "green"}
     team add yellowTeam {"text": "黄チーム - 黄金の祝福","color": "yellow"}
+    team modify redTeam color red
+    team modify blueTeam color blue
+    team modify greenTeam color green
+    team modify yellowTeam color yellow
 
 # ゲームフェーズ設定
     execute unless score #game_manager game.phase matches 1.. run scoreboard players set #game_manager game.phase 1

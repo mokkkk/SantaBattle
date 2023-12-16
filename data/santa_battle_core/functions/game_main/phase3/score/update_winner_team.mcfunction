@@ -2,11 +2,11 @@
 #
 # バトルの勝利チーム更新処理
 
-# チームのスコアに加算
-    execute if entity @s[team=redTeam] store result score #temp_team_score temp run scoreboard players add #game_manager game.team_score.red 1
-    execute if entity @s[team=blueTeam] store result score #temp_team_score temp run scoreboard players add #game_manager game.team_score.blue 1
-    execute if entity @s[team=greenTeam] store result score #temp_team_score temp run scoreboard players add #game_manager game.team_score.green 1
-    execute if entity @s[team=yellowTeam] store result score #temp_team_score temp run scoreboard players add #game_manager game.team_score.yellow 1
+# チームのスコア取得
+    execute if entity @s[team=redTeam] run scoreboard players operation #temp_team_score temp = #game_manager game.team_score.red
+    execute if entity @s[team=blueTeam] run scoreboard players operation #temp_team_score temp = #game_manager game.team_score.blue
+    execute if entity @s[team=greenTeam] run scoreboard players operation #temp_team_score temp = #game_manager game.team_score.green
+    execute if entity @s[team=yellowTeam] run scoreboard players operation #temp_team_score temp = #game_manager game.team_score.yellow
 
 # killerチームのスコア > 最高スコアの場合，タグを付与
     execute if score #temp_team_score temp > #game_manager game.max_team_score run tag @s add Temp.Winner
@@ -20,10 +20,12 @@
 
 # 勝者タグ更新
     execute if entity @s[tag=Temp.Winner] run tag @a remove Player.Winner
-    execute if entity @s[tag=Temp.Winner,team=redTeam] run tag @a[team=redTeam] add Player.Winner
-    execute if entity @s[tag=Temp.Winner,team=blueTeam] run tag @a[team=blueTeam] add Player.Winner
-    execute if entity @s[tag=Temp.Winner,team=greenTeam] run tag @a[team=greenTeam] add Player.Winner
-    execute if entity @s[tag=Temp.Winner,team=yellowTeam] run tag @a[team=yellowTeam] add Player.Winner
+    execute if entity @s[tag=Temp.Winner] run tag @a remove Player.WinnerTeam
+    execute if entity @s[tag=Temp.Winner,team=redTeam] run tag @a[team=redTeam] add Player.WinnerTeam
+    execute if entity @s[tag=Temp.Winner,team=blueTeam] run tag @a[team=blueTeam] add Player.WinnerTeam
+    execute if entity @s[tag=Temp.Winner,team=greenTeam] run tag @a[team=greenTeam] add Player.WinnerTeam
+    execute if entity @s[tag=Temp.Winner,team=yellowTeam] run tag @a[team=yellowTeam] add Player.WinnerTeam
+    tag @a[tag=Player.WinnerTeam] add Player.Winner
 
 # 最高スコア更新
     execute if entity @s[tag=Temp.Winner] run scoreboard players operation #game_manager game.max_team_score = #temp_team_score temp

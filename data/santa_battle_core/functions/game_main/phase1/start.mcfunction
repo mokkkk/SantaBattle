@@ -9,6 +9,11 @@
 # phase変更
     scoreboard players set #game_manager game.phase 1
 
+# 終了処理
+    tag @a remove Player.Winner
+    tag @a remove Player.WinnerTeam
+    execute as @a at @s run function santa_battle_core:player/sled/end_ride_without_delta
+
 # ロビーに戻す
     tp @a 64.0 -57 16.0
     spawnpoint @a 64 -57 16

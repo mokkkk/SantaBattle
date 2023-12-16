@@ -25,3 +25,11 @@
     scoreboard players set #game_manager game.winner_player_id -1
     scoreboard players set #game_manager game.winner_team_id -1
     scoreboard players set #game_manager game.max_score 0
+    scoreboard players set #game_manager game.max_team_score 0
+    scoreboard players set #game_manager game.team_score.red 0
+    scoreboard players set #game_manager game.team_score.blue 0
+    scoreboard players set #game_manager game.team_score.green 0
+    scoreboard players set #game_manager game.team_score.yellow 0
+
+# TODO:バトルフィールドに移動
+    execute as @a at @s run function santa_battle_core:player/sled/end_ride_without_delta
