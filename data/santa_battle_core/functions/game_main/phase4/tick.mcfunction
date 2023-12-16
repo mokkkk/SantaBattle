@@ -6,8 +6,8 @@
     scoreboard players set @a player.invulnerable_timer 100
 
 # 動物の動きを弱める
-    scoreboard players set @a player.sled_status.max_speed 100
-    scoreboard players set @a player.sled_status.current_speed 100
+    scoreboard players set @a player.sled_status.max_speed 300
+    scoreboard players set @a player.sled_status.current_speed 300
 
 # 音
     execute if score #game_manager game.timer matches 595..600 as @a at @s run playsound entity.arrow.hit_player master @s ~ ~ ~ 1 2

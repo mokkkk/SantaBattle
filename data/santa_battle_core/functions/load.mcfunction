@@ -57,10 +57,12 @@
     team add blueTeam {"text": "青チーム - 深海の抱擁","color": "blue"}
     team add greenTeam {"text": "緑チーム - 翠緑の薫風","color": "green"}
     team add yellowTeam {"text": "黄チーム - 黄金の祝福","color": "yellow"}
+    team add ghostTeam {"text": "ゴースト - 観衆","color": "gray"}
     team modify redTeam color red
     team modify blueTeam color blue
     team modify greenTeam color green
     team modify yellowTeam color yellow
+    team modify ghostTeam color gray
 
 # ゲームフェーズ設定
     execute unless score #game_manager game.phase matches 1.. run scoreboard players set #game_manager game.phase 1
@@ -80,3 +82,7 @@
     scoreboard players set #const_3600 const 3600
     scoreboard players set #const_1000 const 1000
     scoreboard players set #const_minus const -1
+
+# データ初期化
+    data modify storage santa_battle_core: Data.Ui.EnableTeam set value {Pos:{X:67,Y:-58,Z:24}}
+    data modify storage santa_battle_core: Data.Ui.Timer set value {Pos:{X:67,Y:-58,Z:25}}

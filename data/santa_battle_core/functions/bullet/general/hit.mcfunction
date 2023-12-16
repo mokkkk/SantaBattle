@@ -13,7 +13,7 @@
     # tellraw @a [{"text": "<"},{"selector":"@a[tag=Temp.Killer]"},{"text": "> が <"},{"selector":"@s"},{"text": "> に死をプレゼント！"}]
 
 # 通知
-    tellraw @a [{"text": "<"},{"text": "〇","bold":true,"color": "dark_green"},{"selector":"@a[tag=Temp.Killer]","bold":false},{"text": "> が <"},{"text": "<"},{"text": "×","bold":true,"color": "dark_red"},{"selector":"@s","bold":false},{"text": "> に死をプレゼント!"}]
+    tellraw @a [{"text": "<"},{"text": "〇","bold":true,"color": "dark_green"},{"selector":"@a[tag=Temp.Killer]","bold":false},{"text": "> が <"},{"text": "×","bold":true,"color": "dark_red"},{"selector":"@s","bold":false},{"text": "> に死をプレゼント!"}]
 
 # スコア更新
     function santa_battle_core:game_main/phase3/score/kill_score
