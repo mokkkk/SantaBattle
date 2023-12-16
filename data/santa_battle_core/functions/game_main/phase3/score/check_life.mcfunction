@@ -7,9 +7,7 @@
     execute if entity @a[tag=!Temp.Winner,tag=!Player.Ghost] run tag @s remove Temp.Winner
     execute if entity @a[tag=!Temp.Winner,tag=!Player.Ghost] run return 0
 
-# 生き残りがいない場合，自身を勝者としてゲームを終了する
-    tag @a remove Player.Winner
-    tag @s add Player.Winner
+# 生き残りがいない場合、ゲームを終了する
     title @a times 10t 160t 10t
     title @a title {"text": "KNOCK OUT!!","color": "gold","bold": true}
     function santa_battle_core:game_main/phase4/start

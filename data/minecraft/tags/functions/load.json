@@ -1,5 +1,6 @@
 {
     "values": [
-        "santa_battle_core:load"
+        "santa_battle_core:load",
+        "bgm:jingle_bells/load"
     ]
 }
