@@ -21,6 +21,12 @@
 # 減速率設定:0.99
     scoreboard players set @e[type=item_display,tag=Temp.Start,tag=Mob.Bullet] bullet.status.speed_deceleration_mult 990
 
+# チームに追加
+    execute if entity @s[team=redTeam] run tag @e[type=item_display,tag=Temp.Start,tag=Mob.Bullet] add Player.RedTeam
+    execute if entity @s[team=blueTeam] run tag @e[type=item_display,tag=Temp.Start,tag=Mob.Bullet] add Player.BlueTeam
+    execute if entity @s[team=greenTeam] run tag @e[type=item_display,tag=Temp.Start,tag=Mob.Bullet] add Player.GreenTeam
+    execute if entity @s[team=yellowTeam] run tag @e[type=item_display,tag=Temp.Start,tag=Mob.Bullet] add Player.YellowTeam
+
 # 初期化
     execute as @e[type=item_display,tag=Temp.Start,tag=Mob.Bullet] run function santa_battle_core:player/item/snowball/init
 

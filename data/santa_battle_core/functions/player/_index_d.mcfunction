@@ -23,6 +23,10 @@
     #declare tag Player.Draw 現状の引分者
     #declare tag Player.WinnerTeam 現状の勝利チーム
     #declare tag Player.Ghost 観戦者・または残機がなくなったプレイヤー
+    #declare tag Player.RedTeam
+    #declare tag Player.BlueTeam
+    #declare tag Player.GreenTeam
+    #declare tag Player.YellowTeam
 
 # Mob関連：Mobのみに付与する
     #declare tag Mob.SledMob ソリの牽引動物
