@@ -16,7 +16,7 @@
     tellraw @a [{"text": "<"},{"text": "〇","bold":true,"color": "dark_green"},{"selector":"@a[tag=Temp.Killer]","bold":false},{"text": "> が <"},{"text": "×","bold":true,"color": "dark_red"},{"selector":"@s","bold":false},{"text": "> に死をプレゼント!"}]
 
 # スコア更新
-    function santa_battle_core:game_main/phase3/score/kill_score
+    execute if score #game_manager game.phase matches 3 run function santa_battle_core:game_main/phase3/score/kill_score
 
 # 終了
     tag @a remove Temp.Killer
