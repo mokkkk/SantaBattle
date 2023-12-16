@@ -14,5 +14,5 @@
 
 # ロビーに戻す
     gamemode adventure @a
-    tp @a 64.0 -57 16.0
-    spawnpoint @a 64 -57 16
+    tp @a 56.0 -59 16.0
+    spawnpoint @a 56 -59 16

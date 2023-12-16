@@ -82,8 +82,3 @@
     scoreboard players set #const_3600 const 3600
     scoreboard players set #const_1000 const 1000
     scoreboard players set #const_minus const -1
-
-# データ初期化
-    data modify storage santa_battle_core: Data.Ui.EnableTeam set value {Pos:{X:67,Y:-58,Z:24}}
-    data modify storage santa_battle_core: Data.Ui.Timer set value {Pos:{X:67,Y:-58,Z:25}}
-    data modify storage santa_battle_core: Data.Ui.Life set value {Pos:{X:67,Y:-58,Z:26}}

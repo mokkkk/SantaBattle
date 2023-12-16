@@ -28,7 +28,6 @@
     execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Winner] subtitle {"text": "勝った!勝った!夕飯はドン勝だ!!!","color": "red","bold": true}
     execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Loser] title {"text": "YOU LOSE...","color": "blue","bold": true}
     execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Loser] subtitle {"text": "なんで負けたか、明日までに考えといてください","color": "blue","bold": true}
-    # execute if score #game_manager game.timer matches 480 unless entity @a[tag=Player.Winner] as @a at @s run playsound block.bell.use master @s ~ ~ ~ 1 0.7
-    
+
 # phase変更
     execute if score #game_manager game.timer matches ..200 run function santa_battle_core:game_main/phase1/start
