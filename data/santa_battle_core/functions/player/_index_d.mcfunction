@@ -20,6 +20,7 @@
     #declare tag Player.OnSled プレイヤーがソリに乗っている
     #declare tag Player.Winner 現状の勝者
     #declare tag Player.WinnerTeam 現状の勝利チーム
+    #declare tag Player.Ghost 観戦者・または残機がなくなったプレイヤー
 
 # Mob関連：Mobのみに付与する
     #declare tag Mob.SledMob ソリの牽引動物

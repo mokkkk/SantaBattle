@@ -18,5 +18,8 @@
 # 無敵時間付与：5秒
     scoreboard players set @s player.invulnerable_timer 100
 
+# spectator化
+    execute if entity @s[tag=Player.Ghost] run gamemode spectator @s
+
 # タグリセット
     tag @s remove Player.OnSled

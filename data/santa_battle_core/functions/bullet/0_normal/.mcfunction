@@ -16,7 +16,7 @@
     function santa_battle_core:bullet/general/move_start
 
 # 着弾
-    execute as @a[distance=..1.5] unless score @s player.invulnerable_timer matches 1.. run tag @s add Temp.Hit
+    execute as @a[distance=..1.5] unless entity @s[gamemode=!spectator] unless score @s player.invulnerable_timer matches 1.. run tag @s add Temp.Hit
     execute as @a[tag=Temp.Hit] unless score @s player.id = #temp player.id run function santa_battle_core:bullet/general/hit
 
 # 爆発

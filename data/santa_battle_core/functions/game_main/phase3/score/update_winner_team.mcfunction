@@ -9,7 +9,7 @@
     execute if entity @s[team=yellowTeam] run scoreboard players operation #temp_team_score temp = #game_manager game.team_score.yellow
 
 # killerチームのスコア > 最高スコアの場合，タグを付与
-    execute if score #temp_team_score temp > #game_manager game.max_team_score run tag @s add Temp.Winner
+    execute if score #temp_team_score temp matches 1.. if score #temp_team_score temp > #game_manager game.max_team_score run tag @s add Temp.Winner
 
 # 通知
     execute if entity @s[tag=Temp.Winner,tag=!Player.Winner] as @a at @s run playsound ui.button.click master @s ~ ~ ~ 1 1

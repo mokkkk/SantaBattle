@@ -15,6 +15,4 @@
 # タイマー設定
     scoreboard players set #game_manager game.timer 600
 
-# 通知
-    title @a times 10t 160t 10t
-    title @a title {"text": "TIME UP!!","color": "gold","bold": true}
+

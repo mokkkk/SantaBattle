@@ -3,7 +3,7 @@
 # バトルの勝者更新処理
 
 # killerのスコア > 最高スコアの場合，タグを付与
-    execute if score @s player.game_score.kill > #game_manager game.max_score run tag @s add Temp.Winner
+    execute if score @s player.game_score.kill matches 1.. if score @s player.game_score.kill >= #game_manager game.max_score run tag @s add Temp.Winner
 
 # 通知
     execute if entity @s[tag=Temp.Winner,tag=!Player.Winner] as @a at @s run playsound ui.button.click master @s ~ ~ ~ 1 1

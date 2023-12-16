@@ -31,5 +31,10 @@
     scoreboard players set #game_manager game.team_score.green 0
     scoreboard players set #game_manager game.team_score.yellow 0
 
+# プレイヤースコア設定
+    scoreboard players set @a player.invulnerable_timer 100
+    scoreboard players set @a player.game_score.kill 0
+    scoreboard players operation @a player.game_score.life = #game_manager game.setting.max_life
+
 # TODO:バトルフィールドに移動
     execute as @a at @s run function santa_battle_core:player/sled/end_ride_without_delta

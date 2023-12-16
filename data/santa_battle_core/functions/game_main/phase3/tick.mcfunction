@@ -51,4 +51,6 @@
     scoreboard players reset #temp_color
 
 # タイムアップ時，phase変更
+    execute if score #game_manager game.timer matches ..0 run title @a times 10t 160t 10t
+    execute if score #game_manager game.timer matches ..0 run title @a title {"text": "TIME UP!!","color": "gold","bold": true}
     execute if score #game_manager game.timer matches ..0 run function santa_battle_core:game_main/phase4/start
