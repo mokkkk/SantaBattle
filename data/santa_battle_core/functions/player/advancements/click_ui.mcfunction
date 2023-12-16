@@ -2,6 +2,9 @@
 #
 # interactionクリック時実行
 
+# 試合開始
+    execute if entity @s[tag=vaDisplay_StartButton]
+
 # 動物選択
     execute if entity @s[tag=vaDisplay_Animal_Goat] as @a[tag=Temp.Target] at @s run function santa_battle_core:game_main/phase1/select_animal/0_goat
     execute if entity @s[tag=vaDisplay_Animal_Allay] as @a[tag=Temp.Target] at @s run function santa_battle_core:game_main/phase1/select_animal/1_allay

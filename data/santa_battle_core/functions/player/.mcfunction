@@ -19,6 +19,9 @@
 # アイテム処理
     execute at @s run function santa_battle_core:player/item/
 
+# 動物選択処理
+    execute if score #game_manager game.phase matches 1 unless score @s player.help_timer matches 1.. run function santa_battle_core:game_main/phase1/help/
+
 # -------------------------------------------------------
 # 終了処理
     function santa_battle_core:player/tick_end/

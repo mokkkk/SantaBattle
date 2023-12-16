@@ -8,4 +8,5 @@
     tag @s remove Temp.Target
 
 # 終了
+    scoreboard players set @s player.help_timer 40
     advancement revoke @s only santa_battle_core:player_interacted

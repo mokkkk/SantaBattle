@@ -13,3 +13,6 @@
         execute if entity @s[tag=!Player.Ghost] unless score #game_manager game.phase matches 4 if score @s player.invulnerable_timer matches 1.. run particle composter ~ ~1 ~ 0.5 0.8 0.5 0 1 force
     # 減算
         execute if score @s player.invulnerable_timer matches 1.. run scoreboard players remove @s player.invulnerable_timer 1
+
+# ヘルプ処理
+    execute if score @s player.help_timer matches 1.. run scoreboard players remove @s player.help_timer 1
