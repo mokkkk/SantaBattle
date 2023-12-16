@@ -15,7 +15,7 @@
     scoreboard players set #game_manager game.is_hurryup 0
 
 # title設定
-    title @a times 5t 100t 5t
+    title @a times 0t 100t 5t
 
 # スコア設定
     scoreboard players set #game_manager game.winner_player_id -1

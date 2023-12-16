@@ -24,7 +24,7 @@
         scoreboard objectives add player.sled_status.attack_deceleration dummy
         scoreboard objectives add player.sled_status.handling dummy
     # その他プレイヤー用スコア
-        scoreboard objectives add player.game_score.kill dummy
+        scoreboard objectives add player.game_score.kill dummy {"text": "現在のポイント","color": "gold","bold": true}
         scoreboard objectives add player.game_score.life dummy
         scoreboard objectives add player.invulnerable_timer dummy
     # 弾の処理用
@@ -86,3 +86,4 @@
 # データ初期化
     data modify storage santa_battle_core: Data.Ui.EnableTeam set value {Pos:{X:67,Y:-58,Z:24}}
     data modify storage santa_battle_core: Data.Ui.Timer set value {Pos:{X:67,Y:-58,Z:25}}
+    data modify storage santa_battle_core: Data.Ui.Life set value {Pos:{X:67,Y:-58,Z:26}}

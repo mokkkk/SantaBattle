@@ -29,7 +29,7 @@
     execute if score #game_manager game.is_hurryup matches 1 if score #temp_color const matches 0 run bossbar set santa_battle_core:timer color white
 
 # 警告
-    execute if score #game_manager game.is_hurryup matches 1 if score #game_manager game.timer matches 1200 run title @a title {"text": "残り時間わずか!!!","color": "red","bold": true}
+    execute if score #game_manager game.is_hurryup matches 1 if score #game_manager game.timer matches 1200 run title @a title {"text": "残り1分!!!","color": "red","bold": true}
     execute if score #game_manager game.is_hurryup matches 1 if score #game_manager game.timer matches 1200 as @a at @s run playsound entity.arrow.hit_player master @s ~ ~ ~ 1 2
     execute if score #game_manager game.is_hurryup matches 1 if score #game_manager game.timer matches 1197 as @a at @s run playsound entity.arrow.hit_player master @s ~ ~ ~ 1 2
     execute if score #game_manager game.is_hurryup matches 1 if score #game_manager game.timer matches 1194 as @a at @s run playsound entity.arrow.hit_player master @s ~ ~ ~ 1 2
@@ -42,7 +42,11 @@
     execute if score #game_manager game.timer matches 80 as @a at @s run playsound ui.button.click master @s ~ ~ ~ 1 1.5
     execute if score #game_manager game.timer matches 60 as @a at @s run playsound ui.button.click master @s ~ ~ ~ 1 1.5
     execute if score #game_manager game.timer matches 40 as @a at @s run playsound ui.button.click master @s ~ ~ ~ 1 1.5
-    execute if score #game_manager game.timer matches 20 as @a at @s run playsound ui.button.click master @s ~ ~ ~ 1 1.5
+    execute if score #game_manager game.timer matches 120 run title @a title {"text": "5","color": "green","bold": true}
+    execute if score #game_manager game.timer matches 100 run title @a title {"text": "4","color": "green","bold": true}
+    execute if score #game_manager game.timer matches 80 run title @a title {"text": "3","color": "green","bold": true}
+    execute if score #game_manager game.timer matches 60 run title @a title {"text": "2","color": "yellow","bold": true}
+    execute if score #game_manager game.timer matches 40 run title @a title {"text": "1","color": "red","bold": true}
 
 # 終了
     scoreboard players reset #temp_timer
@@ -51,6 +55,6 @@
     scoreboard players reset #temp_color
 
 # タイムアップ時，phase変更
-    execute if score #game_manager game.timer matches ..0 run title @a times 10t 160t 10t
-    execute if score #game_manager game.timer matches ..0 run title @a title {"text": "TIME UP!!","color": "gold","bold": true}
-    execute if score #game_manager game.timer matches ..0 run function santa_battle_core:game_main/phase4/start
+    execute if score #game_manager game.timer matches ..20 run title @a times 10t 160t 10t
+    execute if score #game_manager game.timer matches ..20 run title @a title {"text": "TIME UP!!","color": "gold","bold": true}
+    execute if score #game_manager game.timer matches ..20 run function santa_battle_core:game_main/phase4/start
