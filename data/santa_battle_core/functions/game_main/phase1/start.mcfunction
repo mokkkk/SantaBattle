@@ -13,6 +13,7 @@
     tag @a remove Player.Draw
     execute as @a at @s run function santa_battle_core:player/sled/end_ride_without_delta
     scoreboard objectives setdisplay sidebar
+    execute as @e[type=interaction] run data remove entity @s interaction
 
 # ロビーに戻す
     gamemode adventure @a

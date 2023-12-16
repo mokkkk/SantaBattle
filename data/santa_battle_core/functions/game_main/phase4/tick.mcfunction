@@ -21,7 +21,7 @@
 # 勝敗表示
     execute if score #game_manager game.timer matches 480 unless score #game_manager game.setting.is_team matches 1.. unless score #game_manager game.setting.is_life matches 1.. run function santa_battle_core:game_main/phase4/get_winner_score
     execute if score #game_manager game.timer matches 480 unless score #game_manager game.setting.is_team matches 1.. if score #game_manager game.setting.is_life matches 1.. run function santa_battle_core:game_main/phase4/get_winner_life
-
+    execute if score #game_manager game.timer matches 480 if score #game_manager game.setting.is_team matches 1.. unless score #game_manager game.setting.is_life matches 1.. run function santa_battle_core:game_main/phase4/get_winner_score_team
     execute if score #game_manager game.timer matches 480 if score #game_manager game.setting.is_team matches 1.. if score #game_manager game.setting.is_life matches 1.. run function santa_battle_core:game_main/phase4/get_winner_life_team
     execute if score #game_manager game.timer matches 480 run title @a times 0t 160t 10t
     execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Draw] title {"text": "DRAW","color": "gray","bold": true}
@@ -30,7 +30,7 @@
     execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Winner] subtitle {"text": "勝った!勝った!夕飯はドン勝だ!!!","color": "red","bold": true}
     execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Loser] title {"text": "YOU LOSE...","color": "blue","bold": true}
     execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Loser] subtitle {"text": "なんで負けたか、明日までに考えといてください","color": "blue","bold": true}
-    execute if score #game_manager game.timer matches 480 as @a[tag=Player.Winner] at @s run function bgm:jingle_bells/play
+    execute if score #game_manager game.timer matches 480 as @a[tag=Player.Winner] at @s run function bgm:jingle_bells/start
     execute if score #game_manager game.timer matches 480 as @a[tag=Player.Draw] at @s run playsound block.bell.use master @s ~ ~ ~ 4 0.8
     execute if score #game_manager game.timer matches 480 as @a[tag=Player.Loser] at @s run playsound entity.generic.explode master @s ~ ~ ~ 1 0.8
 

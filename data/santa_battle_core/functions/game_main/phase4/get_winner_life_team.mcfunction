@@ -31,6 +31,8 @@
     execute if entity @a[tag=Player.Winner,team=blueTeam] run scoreboard players add #temp_player_count temp 1
     execute if entity @a[tag=Player.Winner,team=greenTeam] run scoreboard players add #temp_player_count temp 1
     execute if entity @a[tag=Player.Winner,team=yellowTeam] run scoreboard players add #temp_player_count temp 1
+    execute if score #temp_player_count temp matches 2.. run tag @a[tag=Player.Winner] add Player.Draw
+    execute if score #temp_player_count temp matches 2.. run tag @a[tag=Player.Winner] remove Player.Winner
 
 # 終了
     scoreboard players reset #temp_max_life

@@ -1,6 +1,5 @@
 {
     "values": [
-        "santa_battle_core:tick",
-        "bgm:jingle_bells/tick"
+        "santa_battle_core:tick"
     ]
 }
