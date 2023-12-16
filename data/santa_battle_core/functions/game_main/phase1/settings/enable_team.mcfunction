@@ -13,5 +13,3 @@
 
 # UI更新
     execute on passengers if entity @s[tag=vaDisplay_Lore] run function santa_battle_core:game_main/phase1/settings/m_enable_team_apply
-
-# setblock ~ ~1 ~ dark_oak_wall_sign[facing=west]{front_text:{messages:['{"text":""}','{"text":"チーム戦","bold":true,"color":"white"}','{"text":"[有効]","color":"blue","bold":true,"underlined":true,"clickEvent":{"action":"run_command","value":"/function santa_battle_core:game_main/phase1/settings/enable_team"}}','{"text":""}']}} replace
