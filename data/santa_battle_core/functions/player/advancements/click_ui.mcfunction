@@ -3,6 +3,14 @@
 # interactionクリック時実行
 
 # 動物選択
+    execute if entity @s[tag=vaDisplay_Animal_Goat] as @a[tag=Temp.Target] at @s run function santa_battle_core:game_main/phase1/select_animal/0_goat
+    execute if entity @s[tag=vaDisplay_Animal_Allay] as @a[tag=Temp.Target] at @s run function santa_battle_core:game_main/phase1/select_animal/1_allay
+    execute if entity @s[tag=vaDisplay_Animal_Sniffer] as @a[tag=Temp.Target] at @s run function santa_battle_core:game_main/phase1/select_animal/2_sniffer
+    execute if entity @s[tag=vaDisplay_Animal_Dolphine] as @a[tag=Temp.Target] at @s run function santa_battle_core:game_main/phase1/select_animal/3_dolphine
+    execute if entity @s[tag=vaDisplay_Animal_Wolf] as @a[tag=Temp.Target] at @s run function santa_battle_core:game_main/phase1/select_animal/4_wolf
+    execute if entity @s[tag=vaDisplay_Animal_Chicken] as @a[tag=Temp.Target] at @s run function santa_battle_core:game_main/phase1/select_animal/5_chicken
+    execute if entity @s[tag=vaDisplay_Animal_Skeleton] as @a[tag=Temp.Target] at @s run function santa_battle_core:game_main/phase1/select_animal/6_skeleton
+    execute if entity @s[tag=vaDisplay_Animal_Random] as @a[tag=Temp.Target] at @s run function santa_battle_core:game_main/phase1/select_animal/7_random
 
 # ゲーム設定変更
     execute if entity @s[tag=vaDisplay_TeamMode] run function santa_battle_core:game_main/phase1/settings/enable_team
