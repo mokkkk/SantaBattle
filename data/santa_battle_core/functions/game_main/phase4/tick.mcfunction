@@ -36,5 +36,12 @@
     execute if score #game_manager game.timer matches 480 as @a[tag=Player.Draw,tag=!Player.GhostTeam] at @s run playsound block.bell.use master @s ~ ~ ~ 4 0.8
     execute if score #game_manager game.timer matches 480 as @a[tag=Player.Loser,tag=!Player.GhostTeam] at @s run playsound entity.generic.explode master @s ~ ~ ~ 1 0.8
 
+# 表彰
+    execute if score #game_manager game.timer matches 480 as @a[tag=Player.Winner] at @s run function santa_battle_core:game_main/phase4/summon_firework
+    execute if score #game_manager game.timer matches 475 as @a[tag=Player.Winner] at @s run function santa_battle_core:game_main/phase4/summon_firework
+    execute if score #game_manager game.timer matches 470 as @a[tag=Player.Winner] at @s run function santa_battle_core:game_main/phase4/summon_firework
+    execute if score #game_manager game.timer matches 465 as @a[tag=Player.Winner] at @s run function santa_battle_core:game_main/phase4/summon_firework
+    execute if score #game_manager game.timer matches 460 as @a[tag=Player.Winner] at @s run function santa_battle_core:game_main/phase4/summon_firework
+
 # phase変更
     execute if score #game_manager game.timer matches ..200 run function santa_battle_core:game_main/phase1/start
