@@ -44,6 +44,7 @@
     #declare tag Mob.Bullet.Normal 通常弾
     #declare tag Mob.Bullet.IsHitBlock 弾ブロック着弾時
     #declare tag Mob.TeamDummyEntity チーム点数処理用のダミーエンティティ
+    #declare tag Mob.FootingMarker 足場用marker
 
 # Storage
     #declare storage santa_battle_core: 基本storage
