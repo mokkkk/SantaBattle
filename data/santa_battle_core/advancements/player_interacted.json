@@ -1,0 +1,4 @@
+{
+    "criteria": {"requirement": {"trigger": "minecraft:player_interacted_with_entity","conditions": {"entity": {"nbt": "{Tags:[\"vaDisplayHB\"]}"}}}},
+    "rewards": {"function": "santa_battle_core:player/advancements/interact_ui"}
+  }

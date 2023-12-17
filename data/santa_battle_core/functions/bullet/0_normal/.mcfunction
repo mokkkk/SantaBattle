@@ -9,11 +9,18 @@
 # タイマー増加
     scoreboard players add @s bullet.timer 1
 
+# 弾を回転させる
+    execute if score @s bullet.timer matches 1 run data modify entity @s transformation.right_rotation set value [360f,0f,0f]
+
 # 移動
     function santa_battle_core:bullet/general/move_start
 
 # 着弾
-    tag @a[distance=..1.5] add Temp.Hit
+    execute as @a[distance=..1.5] unless entity @s[gamemode=spectator] unless score @s player.invulnerable_timer matches 1.. run tag @s add Temp.Hit
+    execute if entity @s[tag=Player.RedTeam] run tag @a[team=redTeam] remove Temp.Hit
+    execute if entity @s[tag=Player.BlueTeam] run tag @a[team=blueTeam] remove Temp.Hit
+    execute if entity @s[tag=Player.GreenTeam] run tag @a[team=greenTeam] remove Temp.Hit
+    execute if entity @s[tag=Player.YellowTeam] run tag @a[team=yellowTeam] remove Temp.Hit
     execute as @a[tag=Temp.Hit] unless score @s player.id = #temp player.id run function santa_battle_core:bullet/general/hit
 
 # 爆発

@@ -10,3 +10,5 @@
 
 # 終了
     data remove storage santa_battle_core: Temp.Mainhand
+
+# give @p carrot_on_a_stick{display:{Name:'[{"text":"ジングル","color":"red","italic":false},{"text":"・","color":"white","italic":false},{"text":"ベル","color":"green","italic":false}]',Lore:['{"text":"空飛ぶソリを召喚する素敵な鐘．","italic":false}','{"text":"サンタの必需品．","italic":false}']},CustomModelData:1226,SbcItemId:1} 1

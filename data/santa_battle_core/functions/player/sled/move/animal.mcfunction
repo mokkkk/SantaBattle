@@ -8,7 +8,7 @@
     execute unless entity @s[tag=IsHit] if score @s player.sled_status.current_speed matches 2001.. unless block ^ ^ ^3 #santa_battle_core:no_collision run function santa_battle_core:player/sled/move/animal_check
 
 # 正面が地面じゃなければその位置
-    execute unless entity @s[tag=IsHit] positioned ^ ^ ^2.8 run tp @s ~ ~-1 ~ ~ 0
+    execute unless entity @s[tag=IsHit] positioned ^ ^ ^2.8 positioned ~ ~ ~ rotated ~ 0 run function santa_battle_core:player/sled/move/animal_tp
 
 # 終了
     tag @s remove IsHit
