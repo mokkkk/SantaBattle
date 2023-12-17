@@ -24,17 +24,17 @@
     execute if score #game_manager game.timer matches 480 if score #game_manager game.setting.is_team matches 1.. unless score #game_manager game.setting.is_life matches 1.. run function santa_battle_core:game_main/phase4/get_winner_score_team
     execute if score #game_manager game.timer matches 480 if score #game_manager game.setting.is_team matches 1.. if score #game_manager game.setting.is_life matches 1.. run function santa_battle_core:game_main/phase4/get_winner_life_team
     execute if score #game_manager game.timer matches 480 run title @a times 0t 160t 10t
-    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Draw,tag=!Player.GhostTeam] title {"text": "DRAW","color": "gray","bold": true}
-    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Draw,tag=!Player.GhostTeam] subtitle {"text": "やっぱり平和が一番","color": "gray","bold": true}
-    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Winner,tag=!Player.GhostTeam] title {"text": "YOU WIN!!","color": "red","bold": true}
-    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Winner,tag=!Player.GhostTeam] subtitle {"text": "勝った!勝った!夕飯はターキーだ!!!","color": "red","bold": true}
-    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Loser,tag=!Player.GhostTeam] title {"text": "YOU LOSE...","color": "blue","bold": true}
-    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Loser,tag=!Player.GhostTeam] subtitle {"text": "なんで負けたか、明日までに考えといてください","color": "blue","bold": true}
-    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.GhostTeam] title {"text": "THE SHOW'S OVER","color": "blue","bold": true}
-    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.GhostTeam] subtitle {"text": "次は参加しよう!","color": "blue","bold": true}
-    execute if score #game_manager game.timer matches 480 as @a[tag=Player.Winner,tag=!Player.GhostTeam] at @s run function bgm:jingle_bells/start
-    execute if score #game_manager game.timer matches 480 as @a[tag=Player.Draw,tag=!Player.GhostTeam] at @s run playsound block.bell.use master @s ~ ~ ~ 4 0.8
-    execute if score #game_manager game.timer matches 480 as @a[tag=Player.Loser,tag=!Player.GhostTeam] at @s run playsound entity.generic.explode master @s ~ ~ ~ 1 0.8
+    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Draw,tag=!Player.Visitor] title {"text": "DRAW","color": "gray","bold": true}
+    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Draw,tag=!Player.Visitor] subtitle {"text": "やっぱり平和が一番","color": "gray","bold": true}
+    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Winner,tag=!Player.Visitor] title {"text": "YOU WIN!!","color": "red","bold": true}
+    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Winner,tag=!Player.Visitor] subtitle {"text": "勝った!勝った!夕飯はターキーだ!!!","color": "red","bold": true}
+    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Loser,tag=!Player.Visitor] title {"text": "YOU LOSE...","color": "blue","bold": true}
+    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Loser,tag=!Player.Visitor] subtitle {"text": "なんで負けたか、明日までに考えといてください","color": "blue","bold": true}
+    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Visitor] title {"text": "THE SHOW'S OVER","color": "gray","bold": true}
+    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Visitor] subtitle {"text": "次は参加しよう!","color": "gray","bold": true}
+    execute if score #game_manager game.timer matches 480 as @a[tag=Player.Winner,tag=!Player.Visitor] at @s run function bgm:jingle_bells/start
+    execute if score #game_manager game.timer matches 480 as @a[tag=Player.Draw,tag=!Player.Visitor] at @s run playsound block.bell.use master @s ~ ~ ~ 4 0.8
+    execute if score #game_manager game.timer matches 480 as @a[tag=Player.Loser,tag=!Player.Visitor] at @s run playsound entity.generic.explode master @s ~ ~ ~ 1 0.8
 
 # 表彰
     execute if score #game_manager game.timer matches 480 as @a[tag=Player.Winner] at @s run function santa_battle_core:game_main/phase4/summon_firework

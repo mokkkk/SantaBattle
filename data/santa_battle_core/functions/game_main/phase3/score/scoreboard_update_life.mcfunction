@@ -3,6 +3,6 @@
 # スコアボードの表示更新
 
 # ライフが無い者はグレーにする
-    execute as @a[tag=!Player.GhostTeam] if score @s player.game_score.life matches ..0 run scoreboard players display numberformat @s player.game_score.life fixed {"text":"KNOCKOUT!!!","color":"dark_gray","bold":true}
+    execute as @a[tag=!Player.Ghost] if score @s player.game_score.life matches ..0 run scoreboard players display numberformat @s player.game_score.life fixed {"text":"KNOCKOUT!!!","color":"dark_gray","bold":true}
 # その他は白色にする
-    execute as @a[tag=!Player.GhostTeam] if score @s player.game_score.life matches 1.. run scoreboard players display numberformat @s player.game_score.life styled {"color":"white","bold":true}
+    execute as @a[tag=!Player.Ghost] if score @s player.game_score.life matches 1.. run scoreboard players display numberformat @s player.game_score.life styled {"color":"white","bold":true}

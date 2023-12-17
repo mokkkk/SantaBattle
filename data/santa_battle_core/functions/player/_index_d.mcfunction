@@ -26,6 +26,7 @@
     #declare tag Player.Draw 現状の引分者
     #declare tag Player.WinnerTeam 現状の勝利チーム
     #declare tag Player.Ghost 観戦者・または残機がなくなったプレイヤー
+    #declare tag Player.Visitor 観戦者
     #declare tag Player.RedTeam
     #declare tag Player.BlueTeam
     #declare tag Player.GreenTeam

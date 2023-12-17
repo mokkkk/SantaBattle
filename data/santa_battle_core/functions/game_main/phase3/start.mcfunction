@@ -44,6 +44,7 @@
 
 # バトルフィールドに移動
     execute as @a[tag=Player.GhostTeam] run tag @s add Player.Ghost
+    execute as @a[tag=Player.GhostTeam] run tag @s add Player.Visitor
     execute as @a[tag=Player.GhostTeam] run gamemode spectator @s
     execute as @a at @s run function santa_battle_core:player/sled/end_ride_without_delta
     execute unless score #game_manager game.setting.is_team matches 1.. run function santa_battle_core:game_main/phase3/spawn/first
