@@ -40,7 +40,15 @@
     execute unless score #game_manager game.setting.is_life matches 1.. run scoreboard objectives setdisplay sidebar player.game_score.kill
     execute if score #game_manager game.setting.is_life matches 1.. run scoreboard objectives setdisplay sidebar player.game_score.life
 
-# TODO:バトルフィールドに移動
+# バトルフィールドに移動
     execute as @a[tag=Player.GhostTeam] run tag @s add Player.Ghost
     execute as @a[tag=Player.GhostTeam] run gamemode spectator @s
     execute as @a at @s run function santa_battle_core:player/sled/end_ride_without_delta
+    execute unless score #game_manager game.setting.is_team matches 1.. run function santa_battle_core:game_main/phase3/spawn/first
+    execute if score #game_manager game.setting.is_team matches 1.. run function santa_battle_core:game_main/phase3/spawn/first_team
+    execute as @a[tag=Player.Ghost] run tp @s 319 136 15
+    execute as @a[tag=!Player.Ghost] at @s align xyz positioned ~0.5 ~0.5 ~0.5 run tp @s ~ ~ ~
+    execute as @a[tag=!Player.Ghost] at @s run tp @s @s
+    execute as @a[tag=!Player.Ghost] at @s run particle explosion_emitter ~ ~ ~ 0 0 0 0 1
+    execute as @a[tag=!Player.Ghost] at @s positioned ~ ~-1 ~ run function santa_battle_core:other/footing/summon
+    spawnpoint @a 319 136 15

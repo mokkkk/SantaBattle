@@ -17,3 +17,4 @@
 # メッセージ
     execute as @a at @s run playsound block.bell.use master @a ~ ~ ~ 3 1
     tellraw @a {"text": "【10秒後にゲームを開始します！】"}
+    setworldspawn 319 136 15

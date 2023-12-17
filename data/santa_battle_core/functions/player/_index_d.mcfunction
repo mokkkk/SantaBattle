@@ -7,12 +7,14 @@
 # Temp：一時的な処理用タグ，基本的に同一functionまたは同tickで除去する
     #declare tag Temp.Start 処理開始時のEntity判別用一時タグ
     #declare tag Temp.Target 紐づけ対象Entity判別用一時タグ
+    #declare tag Temp.TargetSub 上記だけでは足りない場合のみ使用
     #declare tag Temp.Calc 計算用Entity判別用一時タグ
     #declare tag Temp.Calc.PlayerSpeed 計算用Entity判別用一時タグ
     #declare tag Temp.Hit 着弾判定用一時タグ
     #declare tag Temp.Killer 攻撃者判別用一時タグ
     #declare tag Temp.Winner 勝者更新判別用一時タグ
     #declare tag Temp.SameRotation 角度変更検知用一時タグ
+    #declare tag Temp.Moved 移動済み判定用タグ
 
 # Player関連：Playerのみに付与する
     #declare tag Player.Flag.Death プレイヤーが死亡した
@@ -42,6 +44,8 @@
     #declare tag Mob.Bullet.Normal 通常弾
     #declare tag Mob.Bullet.IsHitBlock 弾ブロック着弾時
     #declare tag Mob.TeamDummyEntity チーム点数処理用のダミーエンティティ
+    #declare tag Mob.FootingMarker 足場用marker
+    #declare tag Mob.SpawnPointMarker スポーン地点計算用marker
 
 # Storage
     #declare storage santa_battle_core: 基本storage

@@ -13,3 +13,4 @@
 
 # その他処理
     execute as @e[type=marker,tag=Mob.ParticleMarker] at @s run function santa_battle_core:other/marker_particle
+    execute as @e[type=marker,tag=Mob.FootingMarker] at @s run function santa_battle_core:other/footing/tick

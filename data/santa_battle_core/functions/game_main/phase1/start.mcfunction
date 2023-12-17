@@ -19,3 +19,4 @@
     gamemode adventure @a
     tp @a 56.0 -59 16.0
     spawnpoint @a 56 -59 16
+    setworldspawn 56 -59 16

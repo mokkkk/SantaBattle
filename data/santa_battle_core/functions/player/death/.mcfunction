@@ -21,5 +21,9 @@
 # spectator化
     execute if entity @s[tag=Player.Ghost] run gamemode spectator @s
 
+# リスポーン
+    execute if entity @s[tag=Player.Ghost] if score #game_manager game.phase matches 3 run spawnpoint @a 319 136 15
+    execute if entity @s[tag=!Player.Ghost] if score #game_manager game.phase matches 3 run function santa_battle_core:game_main/phase3/spawn/respawn
+
 # タグリセット
     tag @s remove Player.OnSled
