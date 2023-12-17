@@ -15,10 +15,9 @@
     execute if score #game_manager game.team_score.blue > #game_manager game.max_score run scoreboard players operation #game_manager game.max_score = #game_manager game.team_score.blue
     execute if score #game_manager game.team_score.green > #game_manager game.max_score run scoreboard players operation #game_manager game.max_score = #game_manager game.team_score.green
     execute if score #game_manager game.team_score.yellow > #game_manager game.max_score run scoreboard players operation #game_manager game.max_score = #game_manager game.team_score.yellow
- 
+
 # 最高スコアが0の場合，勝者を消す
     execute if score #game_manager game.max_score matches ..0 run tag @a remove Player.Winner
-    execute if score #game_manager game.max_score matches ..0 run return 0
 
 # 優勝チーム取得
     execute if score #game_manager game.team_score.red matches 1.. if score #game_manager game.team_score.red = #game_manager game.max_score run tag @a[team=redTeam] add Temp.Winner
@@ -31,6 +30,9 @@
     execute if entity @a[tag=Temp.Winner,team=greenTeam] run data modify storage santa_battle_core: Temp.WinnerTeam append value '{"text":"緑チーム","color":"green"}'
     execute if entity @a[tag=Temp.Winner,team=yellowTeam] run data modify storage santa_battle_core: Temp.WinnerTeam append value '{"text":"黄チーム","color":"yellow"}'
 
+ # スコアボード表示を設定
+    function santa_battle_core:game_main/phase3/score/scoreboard_update_team
+    
 # 優勝者がいない場合は通知しない
     execute unless entity @a[tag=Temp.Winner] run return 0
 

@@ -15,8 +15,8 @@
     scoreboard players set @s player.sled_status.min_speed 100
     scoreboard players set @s player.sled_status.current_speed 100
     scoreboard players set @s player.sled_status.max_speed 1500
-    scoreboard players set @s player.sled_status.acceleration 20
-    scoreboard players set @s player.sled_status.attack_deceleration 250
+    scoreboard players set @s player.sled_status.acceleration 30
+    scoreboard players set @s player.sled_status.attack_deceleration 280
     scoreboard players set @s player.sled_status.handling 5500
 
 # 演出

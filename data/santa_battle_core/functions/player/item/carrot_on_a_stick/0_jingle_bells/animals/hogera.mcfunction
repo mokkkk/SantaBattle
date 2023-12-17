@@ -10,9 +10,9 @@
     execute if score #temp_random temp matches 2 at @s anchored eyes positioned ^ ^ ^1 positioned ^ ^ ^2.8 run function animated_java:hogera/summon/green
     execute if score #temp_random temp matches 3 at @s anchored eyes positioned ^ ^ ^1 positioned ^ ^ ^2.8 run function animated_java:hogera/summon/yellow
     execute if score #temp_random temp matches 4.. at @s anchored eyes positioned ^ ^ ^1 positioned ^ ^ ^2.8 run function animated_java:hogera/summon/purple
-    
     execute as @e[type=item_display,tag=Temp.Start] positioned as @s run tp @s ~ ~ ~ ~ ~
     execute as @e[type=item_display,tag=Temp.Start] on passengers if entity @s[tag=aj.hogera.locator_origin.leashed_point] on origin run tag @s add Mob.SledMob
+    execute as @e[type=item_display,tag=Temp.Start] on passengers if entity @s[tag=aj.hogera.locator_origin.leashed_point] on origin run tag @s add Mob.SledMob.Sub1
     execute as @e[type=item_display,tag=Temp.Start] on passengers if entity @s[tag=aj.hogera.locator_origin.leashed_point] on origin run tag @s add Temp.Start
     execute as @e[type=item_display,tag=Temp.Start] run function animated_java:hogera/animations/move/play
     team join NoCollition @e[type=item_display,tag=Temp.Start]
@@ -24,7 +24,7 @@
     execute store result score #temp_random temp run random roll 10..150
     scoreboard players operation @s player.sled_status.min_speed = #temp_random temp
     scoreboard players operation @s player.sled_status.current_speed = @s player.sled_status.min_speed
-    execute store result score #temp_random temp run random roll 600..1600
+    execute store result score #temp_random temp run random roll 600..1800
     scoreboard players operation @s player.sled_status.max_speed = #temp_random temp
     execute store result score #temp_random temp run random roll 5..60
     scoreboard players operation @s player.sled_status.acceleration = #temp_random temp

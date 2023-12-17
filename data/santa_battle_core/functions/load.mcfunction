@@ -47,6 +47,7 @@
         scoreboard objectives add game.team_score.green dummy
         scoreboard objectives add game.team_score.blue dummy
         scoreboard objectives add game.team_score.yellow dummy
+        scoreboard objectives add game.team_score_for_display dummy {"text": "現在のポイント","color": "gold","bold": true}
     # 設定
         scoreboard objectives add game.setting.timer dummy
         scoreboard objectives add game.setting.max_life dummy

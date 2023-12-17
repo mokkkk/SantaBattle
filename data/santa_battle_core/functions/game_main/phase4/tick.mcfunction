@@ -27,7 +27,7 @@
     execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Draw,tag=!Player.GhostTeam] title {"text": "DRAW","color": "gray","bold": true}
     execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Draw,tag=!Player.GhostTeam] subtitle {"text": "やっぱり平和が一番","color": "gray","bold": true}
     execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Winner,tag=!Player.GhostTeam] title {"text": "YOU WIN!!","color": "red","bold": true}
-    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Winner,tag=!Player.GhostTeam] subtitle {"text": "勝った!勝った!夕飯はドン勝だ!!!","color": "red","bold": true}
+    execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Winner,tag=!Player.GhostTeam] subtitle {"text": "勝った!勝った!夕飯はターキーだ!!!","color": "red","bold": true}
     execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Loser,tag=!Player.GhostTeam] title {"text": "YOU LOSE...","color": "blue","bold": true}
     execute if score #game_manager game.timer matches 480 run title @a[tag=Player.Loser,tag=!Player.GhostTeam] subtitle {"text": "なんで負けたか、明日までに考えといてください","color": "blue","bold": true}
     execute if score #game_manager game.timer matches 480 run title @a[tag=Player.GhostTeam] title {"text": "THE SHOW'S OVER","color": "blue","bold": true}

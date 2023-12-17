@@ -9,6 +9,9 @@
 # 優勝者取得
     execute as @a if score @s player.game_score.kill matches 1.. if score @s player.game_score.kill = #game_manager game.max_score run tag @s add Temp.Winner
 
+# スコアボード表示を更新
+    function santa_battle_core:game_main/phase3/score/scoreboard_update_battleroyale
+
 # 優勝者がいない場合は通知しない
     execute unless entity @a[tag=Temp.Winner] run return 0
 
