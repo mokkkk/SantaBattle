@@ -7,4 +7,4 @@
     team join blueTeam @a[tag=Player.BlueTeam]
     team join greenTeam @a[tag=Player.GreenTeam]
     team join yellowTeam @a[tag=Player.YellowTeam]
-    team join ghostTeam @a[tag=Player.TeamGhost]
+    team join ghostTeam @a[tag=Player.GhostTeam]

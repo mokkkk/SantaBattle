@@ -41,4 +41,6 @@
     execute if score #game_manager game.setting.is_life matches 1.. run scoreboard objectives setdisplay sidebar player.game_score.life
 
 # TODO:バトルフィールドに移動
+    execute as @a[tag=Player.GhostTeam] run tag @s add Player.Ghost
+    execute as @a[tag=Player.GhostTeam] run gamemode spectator @s
     execute as @a at @s run function santa_battle_core:player/sled/end_ride_without_delta

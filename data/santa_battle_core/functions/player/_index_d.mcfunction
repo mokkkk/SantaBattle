@@ -28,7 +28,7 @@
     #declare tag Player.BlueTeam
     #declare tag Player.GreenTeam
     #declare tag Player.YellowTeam
-    #declare tag Player.TeamGhost
+    #declare tag Player.GhostTeam
 
 # Mob関連：Mobのみに付与する
     #declare tag Mob.SledMob ソリの牽引動物
