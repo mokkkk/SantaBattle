@@ -4,6 +4,7 @@
 
 # phase変更
     scoreboard players set #game_manager game.phase 1
+    scoreboard players set @a player.game_phase 1
 
 # 終了処理
     tag @a remove Player.Ghost

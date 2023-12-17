@@ -4,6 +4,7 @@
 
 # phase変更
     scoreboard players set #game_manager game.phase 3
+    scoreboard players set @a player.game_phase 3
 
 # タイマー設定
     scoreboard players operation #game_manager game.timer = #game_manager game.setting.timer
@@ -34,6 +35,7 @@
 
 # プレイヤースコア設定
     scoreboard players set @a player.invulnerable_timer 100
+    scoreboard players set @a player.sled_summon_count 3
 
 # スコア表示
     execute unless score #game_manager game.setting.is_life matches 1.. unless score #game_manager game.setting.is_team matches 1.. run function santa_battle_core:game_main/phase3/start_battleroyale
