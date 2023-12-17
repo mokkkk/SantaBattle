@@ -7,6 +7,7 @@
 # Temp：一時的な処理用タグ，基本的に同一functionまたは同tickで除去する
     #declare tag Temp.Start 処理開始時のEntity判別用一時タグ
     #declare tag Temp.Target 紐づけ対象Entity判別用一時タグ
+    #declare tag Temp.TargetSub 上記だけでは足りない場合のみ使用
     #declare tag Temp.Calc 計算用Entity判別用一時タグ
     #declare tag Temp.Calc.PlayerSpeed 計算用Entity判別用一時タグ
     #declare tag Temp.Hit 着弾判定用一時タグ
