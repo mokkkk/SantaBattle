@@ -3,7 +3,7 @@
 # ジングル・ベル 使用開始処理
 
 # 動物種別validate
-    execute unless score @s player.sled_type matches 1..10 run scoreboard players set @s player.sled_type 1
+    execute unless score @s player.sled_type matches 1..8 run scoreboard players set @s player.sled_type 1
 
 # ソリ召喚
     execute at @s rotated ~ 0 anchored eyes positioned ^ ^ ^2 run summon minecart ^ ^ ^ {Tags:["Temp.Start"],NoGravity:1b,Silent:1b,Passengers:[{id:"minecraft:marker",Tags:["Mob.SledRotationMarker"]}]}
@@ -20,6 +20,7 @@
     execute if score @s player.sled_type matches 5 run function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/wolf
     execute if score @s player.sled_type matches 6 run function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/chicken
     execute if score @s player.sled_type matches 7 run function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/skeleton
+    execute if score @s player.sled_type matches 8 run function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/animals/hogera
 # 動物とソリをリードで繋ぐ
     execute as @e[tag=Mob.SledMob,tag=Temp.Start] run data modify entity @s Leash.UUID set from entity @e[type=minecart,tag=Temp.Start,limit=1] UUID
 

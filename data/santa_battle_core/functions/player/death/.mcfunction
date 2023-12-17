@@ -9,8 +9,10 @@
     execute as @e[type=minecart,tag=Temp.Target] on passengers if entity @s[tag=Mob.SledRotationMarker] run tag @s add Temp.Target
 
 # ソリと動物を消去
+    execute as @e[type=item_display,tag=Temp.Target] run function animated_java:hogera/remove/this
     tp @e[tag=Temp.Target] ~ ~-1000 ~
     kill @e[tag=Temp.Target]
+    
 
 # スコアリセット
     scoreboard players set @s player.sled_summon_count 3

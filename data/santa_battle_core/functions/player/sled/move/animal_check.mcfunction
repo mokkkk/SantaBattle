@@ -3,7 +3,8 @@
 # ソリの移動処理 動物 壁激突時
 
 # 速度を落とす
-    execute on leasher on passengers if entity @s[type=player] run scoreboard players operation @s player.sled_status.current_speed = @s player.sled_status.min_speed
+    execute if entity @s[type=!item_display] on leasher on passengers if entity @s[type=player] run scoreboard players operation @s player.sled_status.current_speed = @s player.sled_status.min_speed
+    execute if entity @s[type=item_display] as @e[type=minecart,tag=Temp.Target] on passengers if entity @s[type=player] run scoreboard players operation @s player.sled_status.current_speed = @s player.sled_status.min_speed
 
 # 初期化
     execute store result score @s player.function_count run data get entity @s Rotation[1] 1

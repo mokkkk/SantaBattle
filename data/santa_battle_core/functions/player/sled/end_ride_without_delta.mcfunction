@@ -12,8 +12,10 @@
     ride @s dismount
 
 # ソリと動物を消去
+    execute as @e[type=item_display,tag=Temp.Target] run function animated_java:hogera/remove/this
     tp @e[tag=Temp.Target] ~ ~-1000 ~
     kill @e[tag=Temp.Target]
+    
 
 # 終了
     scoreboard players set @s player.sled_status.current_speed 0
