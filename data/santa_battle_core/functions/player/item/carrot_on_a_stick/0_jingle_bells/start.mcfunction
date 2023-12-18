@@ -2,6 +2,10 @@
 #
 # ジングル・ベル 使用開始処理
 
+# バトル中の処理
+    execute if score #game_manager game.phase matches 3 if score @s player.sled_summon_count matches ..0 run tellraw @s {"text":"もうソリは呼べません"}
+    execute if score #game_manager game.phase matches 3 if score @s player.sled_summon_count matches ..0 run return 0
+
 # 動物種別validate
     execute unless score @s player.sled_type matches 1..8 run scoreboard players set @s player.sled_type 1
 
@@ -34,3 +38,5 @@
     tag @e[tag=Temp.Start] remove Temp.Start
     scoreboard players set @s SvPlayerTimer 0
     tag @s add Player.OnSled
+
+# /summon item_display ~ ~ ~ {Tags:["Test"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.3f,1.3f,1.3f]},item:{id:"minecraft:black_dye",Count:1b,tag:{CustomModelData:50}}}
