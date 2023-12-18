@@ -10,7 +10,10 @@
     execute unless score @s player.sled_type matches 1..8 run scoreboard players set @s player.sled_type 1
 
 # ソリ召喚
-    execute at @s rotated ~ 0 anchored eyes positioned ^ ^ ^2 run summon minecart ^ ^ ^ {Tags:["Temp.Start"],NoGravity:1b,Silent:1b,Passengers:[{id:"minecraft:marker",Tags:["Mob.SledRotationMarker"]}]}
+    execute at @s rotated ~ 0 anchored eyes positioned ^ ^ ^2 run summon minecart ^ ^ ^ {Tags:["Temp.Start"],NoGravity:1b,Silent:1b,Passengers:[{id:"minecraft:marker",Tags:["Mob.SledRotationMarker"]},{id:"minecraft:item_display",teleport_duration:3,Tags:["Mob.SledDisplay","Temp.Start"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.3f,0.1f],scale:[1f,1f,1f]},item:{id:"minecraft:black_dye",Count:1b,tag:{CustomModelData:50}}}]}
+    execute if entity @s[tag=Player.BlueTeam] run data modify entity @e[type=item_display,tag=Mob.SledDisplay,tag=Temp.Start,limit=1,sort=nearest] item.tag.CustomModelData set value 51
+    execute if entity @s[tag=Player.GreenTeam] run data modify entity @e[type=item_display,tag=Mob.SledDisplay,tag=Temp.Start,limit=1,sort=nearest] item.tag.CustomModelData set value 52
+    execute if entity @s[tag=Player.YellowTeam] run data modify entity @e[type=item_display,tag=Mob.SledDisplay,tag=Temp.Start,limit=1,sort=nearest] item.tag.CustomModelData set value 53
     execute as @e[type=minecart,tag=Temp.Start] positioned as @s run tp @s ~ ~ ~ ~ ~
     execute as @e[type=minecart,tag=Temp.Start] on passengers run tp @s ~ ~ ~ ~ ~
     scoreboard players operation @e[type=minecart,tag=Temp.Start] player.id = @s player.id
@@ -38,5 +41,3 @@
     tag @e[tag=Temp.Start] remove Temp.Start
     scoreboard players set @s SvPlayerTimer 0
     tag @s add Player.OnSled
-
-# /summon item_display ~ ~ ~ {Tags:["Test"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.3f,1.3f,1.3f]},item:{id:"minecraft:black_dye",Count:1b,tag:{CustomModelData:50}}}

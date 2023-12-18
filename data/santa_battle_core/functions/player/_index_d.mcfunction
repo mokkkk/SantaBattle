@@ -34,6 +34,7 @@
     #declare tag Player.GhostTeam
 
 # Mob関連：Mobのみに付与する
+    #declare tag Mob.SledDisplay ソリの見た目
     #declare tag Mob.SledMob ソリの牽引動物
     #declare tag Mob.SledMob.Main ソリの牽引動物・メイン
     #declare tag Mob.SledMob.Sub1 ソリの牽引動物・サブ1

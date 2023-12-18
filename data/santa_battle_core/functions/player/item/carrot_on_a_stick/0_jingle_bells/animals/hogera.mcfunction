@@ -14,7 +14,7 @@
     execute as @e[type=item_display,tag=Temp.Start] on passengers if entity @s[tag=aj.hogera.locator_origin.leashed_point] on origin run tag @s add Mob.SledMob
     execute as @e[type=item_display,tag=Temp.Start] on passengers if entity @s[tag=aj.hogera.locator_origin.leashed_point] on origin run tag @s add Mob.SledMob.Sub1
     execute as @e[type=item_display,tag=Temp.Start] on passengers if entity @s[tag=aj.hogera.locator_origin.leashed_point] on origin run tag @s add Temp.Start
-    execute as @e[type=item_display,tag=Temp.Start] run function animated_java:hogera/animations/move/play
+    execute as @e[type=item_display,tag=Mob.Hogera,tag=Temp.Start] run function animated_java:hogera/animations/move/play
     team join NoCollition @e[type=item_display,tag=Temp.Start]
 
 # id設定

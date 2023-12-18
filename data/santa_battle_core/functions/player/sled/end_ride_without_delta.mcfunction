@@ -12,7 +12,7 @@
     ride @s dismount
 
 # ソリと動物を消去
-    execute as @e[type=item_display,tag=Temp.Target] run function animated_java:hogera/remove/this
+    execute as @e[type=item_display,tag=Mob.Hogera,tag=Temp.Target] run function animated_java:hogera/remove/this
     execute unless entity @e[type=item_display,tag=Mob.Hogera] run kill @e[type=chicken,tag=Mob.SledMob.Sub1]
     tp @e[tag=Temp.Target] ~ ~-1000 ~
     kill @e[tag=Temp.Target]
