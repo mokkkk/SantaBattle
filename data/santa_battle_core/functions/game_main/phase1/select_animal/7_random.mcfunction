@@ -3,7 +3,8 @@
 # 動物選択 ヤギ
 
 # 設定変更
-    scoreboard players set @s player.sled_type 1
+    scoreboard players set @s player.sled_type 8
+    scoreboard players set @s player.sled_summon_count 3
 
 # 通知
     playsound ui.button.click master @s ~ ~ ~ 1 2

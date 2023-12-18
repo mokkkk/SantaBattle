@@ -28,6 +28,7 @@
         scoreboard objectives add player.game_score.life dummy {"text": "残り復活回数","color": "gold","bold": true}
         scoreboard objectives add player.invulnerable_timer dummy
         scoreboard objectives add player.help_timer dummy
+        scoreboard objectives add player.game_phase dummy
     # 弾の処理用
         scoreboard objectives add bullet.timer dummy
         scoreboard objectives add bullet.status.speed_x dummy
@@ -47,6 +48,7 @@
         scoreboard objectives add game.team_score.green dummy
         scoreboard objectives add game.team_score.blue dummy
         scoreboard objectives add game.team_score.yellow dummy
+        scoreboard objectives add game.team_score_for_display dummy {"text": "現在のポイント","color": "gold","bold": true}
     # 設定
         scoreboard objectives add game.setting.timer dummy
         scoreboard objectives add game.setting.max_life dummy

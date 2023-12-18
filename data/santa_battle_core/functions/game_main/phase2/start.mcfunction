@@ -7,6 +7,7 @@
 
 # phase変更
     scoreboard players set #game_manager game.phase 2
+    scoreboard players set @a player.game_phase 2
 
 # カウントダウン設定
     scoreboard players set #game_manager game.timer 200

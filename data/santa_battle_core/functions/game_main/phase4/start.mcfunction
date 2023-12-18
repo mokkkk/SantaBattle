@@ -4,6 +4,7 @@
 
 # phase変更
     scoreboard players set #game_manager game.phase 4
+    scoreboard players set @a player.game_phase 4
 
 # bossbar消去
     bossbar remove santa_battle_core:timer

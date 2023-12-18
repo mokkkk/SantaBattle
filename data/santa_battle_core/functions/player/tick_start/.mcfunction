@@ -15,4 +15,8 @@
         execute if score @s player.invulnerable_timer matches 1.. run scoreboard players remove @s player.invulnerable_timer 1
 
 # ヘルプ処理
-    execute if score @s player.help_timer matches 1.. run scoreboard players remove @s player.help_timer 1
+    # UIクリック後のヘルプ非表示のタイマーを減少
+        execute if score @s player.help_timer matches 1.. run scoreboard players remove @s player.help_timer 1
+
+# Phase確認処理
+    execute unless score @s player.game_phase = #game_manager game.phase run function santa_battle_core:player/tick_start/check_phase

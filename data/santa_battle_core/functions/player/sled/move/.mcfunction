@@ -18,6 +18,9 @@
 
 # ソリの速度適用
     function santa_battle_core:player/sled/move/m_apply_speed with storage santa_battle_core: Temp
+    execute facing entity @e[tag=Mob.SledMob.Main,tag=Temp.Target,limit=1,sort=nearest] feet as @e[type=minecart,tag=Temp.Target] on passengers if entity @s[tag=Mob.SledDisplay] run tp @s ~ ~ ~ ~ ~
+    execute as @e[type=minecart,tag=Temp.Target] on passengers if entity @s[tag=Mob.SledDisplay,x_rotation=46..90] at @s run tp @s ~ ~ ~ ~ 45
+    execute as @e[type=minecart,tag=Temp.Target] on passengers if entity @s[tag=Mob.SledDisplay,x_rotation=-90..-31] at @s run tp @s ~ ~ ~ ~ -30
 
 # 演出
     scoreboard players add @s player.sled_particle_timer 1
