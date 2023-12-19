@@ -11,3 +11,6 @@
 
 # タイマー設定
     scoreboard players set #game_manager game.timer 600
+
+# アイテム消去
+    kill @e[type=item_display,tag=Mob.Item]

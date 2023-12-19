@@ -48,6 +48,9 @@
     #declare tag Mob.TeamDummyEntity チーム点数処理用のダミーエンティティ
     #declare tag Mob.FootingMarker 足場用marker
     #declare tag Mob.SpawnPointMarker スポーン地点計算用marker
+    #declare tag Mob.ItemPointMarker アイテム出現位置用marker
+    #declare tag Mob.ItemPointMarker.Disabled アイテム出現位置用marker・アイテム出現中
+    #declare tag Mob.ItemEntity アイテム用Entity
 
 # Storage
     #declare storage santa_battle_core: 基本storage
