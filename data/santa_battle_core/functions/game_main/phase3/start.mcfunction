@@ -38,6 +38,7 @@
 # プレイヤースコア設定
     scoreboard players set @a player.invulnerable_timer 100
     scoreboard players set @a player.sled_summon_count 3
+    scoreboard players set @a player.item.having 0
 
 # スコア表示
     execute unless score #game_manager game.setting.is_life matches 1.. unless score #game_manager game.setting.is_team matches 1.. run function santa_battle_core:game_main/phase3/start_battleroyale
