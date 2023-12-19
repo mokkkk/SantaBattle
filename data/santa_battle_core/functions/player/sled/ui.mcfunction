@@ -17,7 +17,9 @@
     scoreboard players operation #km_h const *= #const_3600 const
     scoreboard players operation #km_h const /= #const_100 const
     execute store result score #km_h_s const run scoreboard players operation #km_h const /= #const_60 const
-    execute store result storage santa_battle_core: Temp.Ui.Speed.h int 1 run scoreboard players operation #km_h const /= #const_1000 const
+    scoreboard players operation #km_h const /= #const_1000 const
+    execute if score #km_h const matches ..-1 run scoreboard players set #km_h const 0
+    execute store result storage santa_battle_core: Temp.Ui.Speed.h int 1 run scoreboard players get #km_h const
     execute store result storage santa_battle_core: Temp.Ui.Speed.s int 1 run scoreboard players operation #km_h_s const %= #const_1000 const
     execute if score #km_h const matches ..9 run data modify storage santa_battle_core: Temp.Ui.Speed.StrH set value '[{"text":"0"},{"nbt":"Temp.Ui.Speed.h","storage":"santa_battle_core:"}]'
     execute if score #km_h const matches 10.. run data modify storage santa_battle_core: Temp.Ui.Speed.StrH set value '{"nbt":"Temp.Ui.Speed.h","storage":"santa_battle_core:"}'
