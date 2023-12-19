@@ -4,6 +4,7 @@
 
 # phase変更
     scoreboard players set @s player.game_phase 1
+    scoreboard players set @s player.item.having 0
 
 # 終了処理
     tag @s remove Player.Winner

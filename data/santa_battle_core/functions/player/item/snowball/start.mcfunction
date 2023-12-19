@@ -10,7 +10,11 @@
     execute store result storage santa_battle_core: Temp.Speed float 0.001 run scoreboard players get @s player.sled_status.current_speed
 
 # 通常弾
-    function santa_battle_core:player/item/snowball/0_normal/m_start with storage santa_battle_core: Temp
+    execute unless score @s player.item.having matches 1.. run function santa_battle_core:player/item/snowball/0_normal/m_start with storage santa_battle_core: Temp
+
+# アイテム
+    # TNT
+        execute if score @s player.item.having matches 1 run function santa_battle_core:player/item/snowball/1_tnt/m_start with storage santa_battle_core: Temp
 
 # ソリをわずかに減速
     execute if entity @s[tag=Player.OnSled] run scoreboard players operation @s player.sled_status.current_speed -= @s player.sled_status.attack_deceleration

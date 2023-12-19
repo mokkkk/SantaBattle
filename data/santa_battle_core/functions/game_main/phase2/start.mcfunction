@@ -4,6 +4,8 @@
 
 # validate
     execute unless score #game_manager game.phase matches 1 run return -1
+    execute if score #game_manager game.setting.is_team matches 1.. run function santa_battle_core:game_main/phase2/start_error
+    execute if score #game_manager game.setting.is_team matches 1.. if entity @a[team=!redTeam,team=!blueTeam,team=!greenTeam,team=!yellowTeam,team=!ghostTeam] run return -1
 
 # phase変更
     scoreboard players set #game_manager game.phase 2
