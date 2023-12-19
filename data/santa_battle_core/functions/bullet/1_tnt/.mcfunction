@@ -16,7 +16,7 @@
     function santa_battle_core:bullet/general/move_start
 
 # 着弾
-    execute as @a[distance=..3.5] unless entity @s[gamemode=spectator] unless score @s player.invulnerable_timer matches 1.. run tag @s add Temp.Hit
+    execute as @a[distance=..4] unless entity @s[gamemode=spectator] unless score @s player.invulnerable_timer matches 1.. run tag @s add Temp.Hit
     execute if entity @s[tag=Player.RedTeam] run tag @a[team=redTeam] remove Temp.Hit
     execute if entity @s[tag=Player.BlueTeam] run tag @a[team=blueTeam] remove Temp.Hit
     execute if entity @s[tag=Player.GreenTeam] run tag @a[team=greenTeam] remove Temp.Hit

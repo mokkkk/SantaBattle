@@ -35,4 +35,5 @@
     kill @e[type=marker,tag=Temp.Calc]
     kill @e[type=marker,tag=Temp.Calc.PlayerSpeed]
     tag @e[tag=Temp.Start] remove Temp.Start
-    scoreboard players set @s player.item.having 0
+    # タイマー：5秒
+        execute if score @s player.item.count matches 1000.. run scoreboard players set @s player.item.count 100

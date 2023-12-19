@@ -30,6 +30,7 @@
         scoreboard objectives add player.help_timer dummy
         scoreboard objectives add player.game_phase dummy
         scoreboard objectives add player.item.having dummy
+        scoreboard objectives add player.item.count dummy
     # 弾の処理用
         scoreboard objectives add bullet.timer dummy
         scoreboard objectives add bullet.status.speed_x dummy
