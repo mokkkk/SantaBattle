@@ -2,6 +2,12 @@
 #
 # ロビー→バトルの開始処理
 
+# キャンセル
+    execute if score #game_manager game.phase matches 2 as @a at @s run playsound ui.button.click master @a ~ ~ ~ 1 1
+    execute if score #game_manager game.phase matches 2 run tellraw @a {"text": "【試合をキャンセルしました】"}
+    execute if score #game_manager game.phase matches 2 run scoreboard players set @a player.game_phase 1
+    execute if score #game_manager game.phase matches 2 store result score #game_manager game.phase run return 1
+
 # validate
     execute unless score #game_manager game.phase matches 1 run return -1
     execute if score #game_manager game.setting.is_team matches 1.. run function santa_battle_core:game_main/phase2/start_error

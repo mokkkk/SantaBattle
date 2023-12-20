@@ -13,7 +13,7 @@
 # 通知
     execute as @a at @s run playsound ui.button.click master @s ~ ~ ~ 1 2
     execute if score #game_manager game.setting.max_item_timer matches 200 run title @a actionbar [{"text": "【アイテム出現数を","color": "white","bold": true},{"text":"<<多め>>","color": "green"},{"text":"に設定しました】","color": "white","bold": true}]
-    execute if score #game_manager game.setting.max_item_timer matches 400 run title @a actionbar [{"text": "【アイテム出現数を","color": "white","bold": true},{"text":"<<それなり>>","color": "green"},{"text":"に設定しました】","color": "white","bold": true}]
+    execute if score #game_manager game.setting.max_item_timer matches 400 run title @a actionbar [{"text": "【アイテム出現数を","color": "white","bold": true},{"text":"<<ふつう>>","color": "green"},{"text":"に設定しました】","color": "white","bold": true}]
     execute if score #game_manager game.setting.max_item_timer matches 800 run title @a actionbar [{"text": "【アイテム出現数を","color": "white","bold": true},{"text":"<<少なめ>>","color": "green"},{"text":"に設定しました】","color": "white","bold": true}]
     execute if score #game_manager game.setting.max_item_timer matches 100000 run title @a actionbar [{"text": "【アイテム出現数を","color": "white","bold": true},{"text":"<<出ない>>","color": "green"},{"text":"に設定しました】","color": "white","bold": true}]
 

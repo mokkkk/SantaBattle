@@ -16,15 +16,15 @@
     execute if entity @s[tag=vaDisplay_Animal_Random] as @a[tag=Temp.Target] at @s run function santa_battle_core:game_main/phase1/select_animal/7_random
 
 # ゲーム設定変更
-    execute if entity @s[tag=vaDisplay_TeamMode] run function santa_battle_core:game_main/phase1/settings/enable_team
-    execute if entity @s[tag=vaDisplay_Timer] run function santa_battle_core:game_main/phase1/settings/timer
-    execute if entity @s[tag=vaDisplay_Life] run function santa_battle_core:game_main/phase1/settings/life
-    execute if entity @s[tag=vaDisplay_ItemMode] run function santa_battle_core:game_main/phase1/settings/item
+    execute if entity @s[tag=vaDisplay_TeamMode] if score #game_manager game.phase matches 1 run function santa_battle_core:game_main/phase1/settings/enable_team
+    execute if entity @s[tag=vaDisplay_Timer] if score #game_manager game.phase matches 1 run function santa_battle_core:game_main/phase1/settings/timer
+    execute if entity @s[tag=vaDisplay_Life] if score #game_manager game.phase matches 1 run function santa_battle_core:game_main/phase1/settings/life
+    execute if entity @s[tag=vaDisplay_ItemMode] if score #game_manager game.phase matches 1 run function santa_battle_core:game_main/phase1/settings/item
 
 # プリセット
-    execute if entity @s[tag=vaDisplay_Preset_TeamDeathmatch] run function santa_battle_core:game_main/phase1/settings/preset_teambattle
-    execute if entity @s[tag=vaDisplay_Preset_FreeBattle] run function santa_battle_core:game_main/phase1/settings/preset_freebattle
-    execute if entity @s[tag=vaDisplay_Preset_Survival] run function santa_battle_core:game_main/phase1/settings/preset_deathmatch
+    execute if entity @s[tag=vaDisplay_Preset_TeamDeathmatch] if score #game_manager game.phase matches 1 run function santa_battle_core:game_main/phase1/settings/preset_teambattle
+    execute if entity @s[tag=vaDisplay_Preset_FreeBattle] if score #game_manager game.phase matches 1 run function santa_battle_core:game_main/phase1/settings/preset_freebattle
+    execute if entity @s[tag=vaDisplay_Preset_Survival] if score #game_manager game.phase matches 1 run function santa_battle_core:game_main/phase1/settings/preset_deathmatch
 
 # チーム加入
     execute if entity @s[tag=vaDisplay_Team_Red] as @a[tag=Temp.Target] run function santa_battle_core:game_main/phase1/team/join_red

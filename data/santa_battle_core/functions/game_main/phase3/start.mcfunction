@@ -62,3 +62,6 @@
     execute as @a[tag=!Player.Ghost] at @s run particle explosion_emitter ~ ~ ~ 0 0 0 0 1
     execute as @a[tag=!Player.Ghost] at @s positioned ~ ~-1 ~ run function santa_battle_core:other/footing/summon
     spawnpoint @a 319 196 15
+
+# 効果音
+    execute as @a at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 0.5
