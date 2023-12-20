@@ -14,10 +14,10 @@
 # ステータス設定
     scoreboard players set @s player.sled_status.min_speed 500
     scoreboard players set @s player.sled_status.current_speed 500
-    scoreboard players set @s player.sled_status.max_speed 1000
-    scoreboard players set @s player.sled_status.acceleration 20
+    scoreboard players set @s player.sled_status.max_speed 1100
+    scoreboard players set @s player.sled_status.acceleration 40
     scoreboard players set @s player.sled_status.attack_deceleration 20
-    scoreboard players set @s player.sled_status.handling 4000
+    scoreboard players set @s player.sled_status.handling 3500
 
 # 演出
     playsound entity.sniffer.scenting master @a ~ ~ ~ 2 1

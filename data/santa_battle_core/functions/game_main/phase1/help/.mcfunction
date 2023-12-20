@@ -25,8 +25,29 @@
     execute if predicate santa_battle_core:player/interaction/teammode run title @s actionbar {"text": "「試合形式を個人戦・チーム戦から選択する。」","color": "aqua","bold": true}
     execute if predicate santa_battle_core:player/interaction/timer run title @s actionbar {"text": "「試合の制限時間を設定する。」","color": "aqua","bold": true}
     execute if predicate santa_battle_core:player/interaction/life run title @s actionbar {"text": "「プレイヤーの復活回数を設定する。<<∞>>以外の場合、他プレイヤーを全員倒した者が勝者となる。」","color": "aqua","bold": true}
+    execute if predicate santa_battle_core:player/interaction/item run title @s actionbar {"text": "「アイテムの出現頻度を設定する。」","color": "aqua","bold": true}
+    execute if predicate santa_battle_core:player/interaction/start at @e[type=interaction,tag=vaDisplay_StartButton] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/teammode at @e[type=interaction,tag=vaDisplay_TeamMode] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/timer at @e[type=interaction,tag=vaDisplay_Timer] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/life at @e[type=interaction,tag=vaDisplay_Life] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/item at @e[type=interaction,tag=vaDisplay_ItemMode] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
 
 # プリセットのヘルプ
     execute if predicate santa_battle_core:player/interaction/preset_team run title @s actionbar {"text": "「ゲームルールのプリセットを適用する。仲間と協力して敵を倒せ。」","color": "aqua","bold": true}
     execute if predicate santa_battle_core:player/interaction/preset_free run title @s actionbar {"text": "「ゲームルールのプリセットを適用する。周りはすべて敵だ。」","color": "aqua","bold": true}
     execute if predicate santa_battle_core:player/interaction/preset_survival run title @s actionbar {"text": "「ゲームルールのプリセットを適用する。最後に生き残るのは誰だ。」","color": "aqua","bold": true}
+    execute if predicate santa_battle_core:player/interaction/preset_team at @e[type=interaction,tag=vaDisplay_Preset_TeamDeathmatch] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/preset_free at @e[type=interaction,tag=vaDisplay_Preset_FreeBattle] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/preset_survival at @e[type=interaction,tag=vaDisplay_Preset_Survival] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+
+# チームのヘルプ
+    execute if predicate santa_battle_core:player/interaction/team_red run title @s actionbar {"text": "「赤チームに加入する。熱き情熱の色。」","color": "aqua","bold": true}
+    execute if predicate santa_battle_core:player/interaction/team_blue run title @s actionbar {"text": "「青チームに加入する。冷たき深淵の色。」","color": "aqua","bold": true}
+    execute if predicate santa_battle_core:player/interaction/team_green run title @s actionbar {"text": "「緑チームに加入する。爽やかなる生命の色。」","color": "aqua","bold": true}
+    execute if predicate santa_battle_core:player/interaction/team_yellow run title @s actionbar {"text": "「黄チームに加入する。神聖なる祝福の色。」","color": "aqua","bold": true}
+    execute if predicate santa_battle_core:player/interaction/team_ghost run title @s actionbar {"text": "「戦闘には参加せず、観戦する。ロビーでも無敵になる。」","color": "aqua","bold": true}
+    execute if predicate santa_battle_core:player/interaction/team_red at @e[type=interaction,tag=vaDisplay_Team_Red] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/team_blue at @e[type=interaction,tag=vaDisplay_Team_Blue] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/team_green at @e[type=interaction,tag=vaDisplay_Team_Green] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/team_yellow at @e[type=interaction,tag=vaDisplay_Team_Yellow] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/team_ghost at @e[type=interaction,tag=vaDisplay_Team_Ghost] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s

@@ -21,7 +21,7 @@
     execute if entity @s[tag=Player.OnSled] if score @s player.sled_status.current_speed < @s player.sled_status.min_speed run scoreboard players operation @s player.sled_status.current_speed = @s player.sled_status.min_speed
 
 # 雪玉補充
-    give @s snowball 1
+    give @s snowball{display:{Name:'{"text":"プレゼントボックス","color":"red","italic":false}',Lore:['{"text":"サンタの基本装備．","italic":false}','{"text":"子供たちに夢を与えることもできるし，","italic":false}','{"text":"競合他者を撃ち落とすこともできる．","italic":false}','{"text":"拾ったものを入れておくこともできる．","italic":false}']}} 1
 
 # 終了
     data remove storage santa_battle_core: Temp

@@ -19,6 +19,7 @@
     execute if entity @s[tag=vaDisplay_TeamMode] run function santa_battle_core:game_main/phase1/settings/enable_team
     execute if entity @s[tag=vaDisplay_Timer] run function santa_battle_core:game_main/phase1/settings/timer
     execute if entity @s[tag=vaDisplay_Life] run function santa_battle_core:game_main/phase1/settings/life
+    execute if entity @s[tag=vaDisplay_ItemMode] run function santa_battle_core:game_main/phase1/settings/item
 
 # プリセット
     execute if entity @s[tag=vaDisplay_Preset_TeamDeathmatch] run function santa_battle_core:game_main/phase1/settings/preset_teambattle
@@ -35,6 +36,8 @@
 # 終了
     execute if data entity @s interaction run data remove entity @s interaction
     tag @a[tag=vaInteracted] remove vaInteracted
+
+# execute positioned 115 83 23 run summon interaction ~ ~0.5 ~ {Tags:["vaDisplay","vaDisplayHB","vaDisplay_ItemMode"],width:1.4f,height:1.4f, response:1b,Passengers:[{id:"text_display",Tags:["vaDisplay","vaDisplay_Title"],billboard:"vertical",text:'{"text":"","color":"#00ffff","bold":true}',background:0, transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,1.0f,0f],scale:[1.2f,1.2f,1.2f]}}, {id:"text_display",Tags:["vaDisplay","vaDisplay_Lore"],billboard:"vertical",text:'[{"text":"アイテム","color":"#00ff00","bold":true},{"text":"<<多め>>","color":"#00ff00","bold":true}]',background:0, transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.0f,0f],scale:[0.6f,0.6f,0.6f]}}, {id:"item_display",Tags:["vaDisplay","vaDisplay_Model"],item:{id:"minecraft:snowball",Count:1b},billboard:"vertical",transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.6f,0f],scale:[0.4f,0.4f,0.4f]}}]}
 
 # execute positioned 96 84 20 run summon interaction ~ ~ ~ {Tags:["vaDisplay","vaDisplayHB","vaDisplay_Team_Ghost"],width:1.6f,height:1.6f, response:1b,Passengers:[{id:"text_display",Tags:["vaDisplay","vaDisplay_Title"],billboard:"vertical",text:'{"text":"","color":"light_purple","bold":true}',background:0, transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,1.0f,0f],scale:[1.2f,1.2f,1.2f]}}, {id:"text_display",Tags:["vaDisplay","vaDisplay_Lore"],billboard:"vertical",text:'{"text":"[観戦する]","color":"#00ff00","bold":true}',background:0, transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.0f,0f],scale:[0.6f,0.6f,0.6f]}}, {id:"item_display",Tags:["vaDisplay","vaDisplay_Model"],item:{id:"minecraft:gray_wool",Count:1b},billboard:"vertical",transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.6f,0f],scale:[0.4f,0.4f,0.4f]}}]}
 
