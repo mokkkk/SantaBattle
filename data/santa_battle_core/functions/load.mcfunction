@@ -29,6 +29,8 @@
         scoreboard objectives add player.invulnerable_timer dummy
         scoreboard objectives add player.help_timer dummy
         scoreboard objectives add player.game_phase dummy
+        scoreboard objectives add player.item.having dummy
+        scoreboard objectives add player.item.count dummy
     # 弾の処理用
         scoreboard objectives add bullet.timer dummy
         scoreboard objectives add bullet.status.speed_x dummy
@@ -49,11 +51,16 @@
         scoreboard objectives add game.team_score.blue dummy
         scoreboard objectives add game.team_score.yellow dummy
         scoreboard objectives add game.team_score_for_display dummy {"text": "現在のポイント","color": "gold","bold": true}
+        scoreboard objectives add game.item_timer dummy
+        scoreboard objectives add game.item_spawn_random dummy
     # 設定
         scoreboard objectives add game.setting.timer dummy
         scoreboard objectives add game.setting.max_life dummy
         scoreboard objectives add game.setting.is_life dummy
         scoreboard objectives add game.setting.is_team dummy
+        scoreboard objectives add game.setting.max_item_timer dummy
+    # その他
+        scoreboard objectives add mob.item_id dummy
 
 # チーム
     team add redTeam {"text": "赤チーム - 真紅の饗宴","color": "red"}

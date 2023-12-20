@@ -39,16 +39,8 @@
     execute if entity @s[tag=!Temp.SameRotation] if score @s player.sled_type matches 7 run scoreboard players remove @s player.sled_status.current_speed 200
     execute if score @s player.sled_type matches 7 if score @s player.sled_status.current_speed matches ..-301 run scoreboard players set @s player.sled_status.current_speed -300
 
-# 時速計算
-    scoreboard players operation #km_h const = @s player.sled_status.current_speed
-    scoreboard players operation #km_h const *= #const_20 const
-    scoreboard players operation #km_h const *= #const_3600 const
-    scoreboard players operation #km_h const /= #const_100 const
-    execute store result score #km_h_s const run scoreboard players operation #km_h const /= #const_60 const
-    scoreboard players operation #km_h const /= #const_1000 const
-    scoreboard players operation #km_h_s const %= #const_1000 const
-
-    title @s actionbar [{"text":"SPEED:","color": "red"},{"score":{"name":"#km_h","objective":"const"}},{"text":"."},{"score":{"name":"#km_h_s","objective":"const"}},{"text":"km/h"}]
+# UI
+    function santa_battle_core:player/sled/ui
 
 # 終了
     tag @s remove Temp.SameRotation

@@ -42,12 +42,18 @@
     #declare tag Mob.SledRotationMarker ソリの移動方向決定用Marker
     #declare tag Mob.ParticleMarker 演出用marker
     #declare tag Mob.ParticleMarker.Death 演出用marker
-    #declare tag Mob.Bullet 弾系Mobの共通タグ
-    #declare tag Mob.Bullet.Normal 通常弾
-    #declare tag Mob.Bullet.IsHitBlock 弾ブロック着弾時
     #declare tag Mob.TeamDummyEntity チーム点数処理用のダミーエンティティ
     #declare tag Mob.FootingMarker 足場用marker
     #declare tag Mob.SpawnPointMarker スポーン地点計算用marker
+    #declare tag Mob.ItemPointMarker アイテム出現位置用marker
+    #declare tag Mob.ItemPointMarker.Disabled アイテム出現位置用marker・アイテム出現中
+    #declare tag Mob.ItemEntity アイテム用Entity
+
+# Mob・弾関連
+    #declare tag Mob.Bullet 弾系Mobの共通タグ
+    #declare tag Mob.Bullet.Normal 通常弾
+    #declare tag Mob.Bullet.Tnt TNT
+    #declare tag Mob.Bullet.IsHitBlock 弾ブロック着弾時
 
 # Storage
     #declare storage santa_battle_core: 基本storage

@@ -48,6 +48,10 @@
     execute if score #game_manager game.timer matches 60 run title @a title {"text": "2","color": "yellow","bold": true}
     execute if score #game_manager game.timer matches 40 run title @a title {"text": "1","color": "red","bold": true}
 
+# アイテム出現処理
+    scoreboard players remove #game_manager game.item_timer 1
+    execute if score #game_manager game.item_timer matches ..0 run function santa_battle_core:game_main/phase3/item/check
+
 # 終了
     scoreboard players reset #temp_timer
     scoreboard players reset #temp_sec

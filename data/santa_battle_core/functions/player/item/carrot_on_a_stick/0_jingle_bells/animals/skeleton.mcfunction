@@ -4,7 +4,7 @@
 # スケルトン：性能は非常に高いが，急な角度変化の際に大きく減速する
 
 # 動物を召喚
-    execute at @s anchored eyes positioned ^ ^ ^1 run summon skeleton_horse ^ ^ ^2.8 {Tags:["Temp.Start","Mob.SledMob","Mob.SledMob.Main"],NoGravity:1b,Silent:1b,NoAI:1b,Invulnerable:1b,DeathLootTable:"minecraft:empty",Passengers:[{id:"minecraft:skeleton",Tags:["Temp.Start","Mob.SledMob","Mob.SledMob.Sub1"],NoGravity:1b,Silent:1b,NoAI:1b,Invulnerable:1b,DeathLootTable:"minecraft:empty"}]}
+    execute at @s anchored eyes positioned ^ ^ ^1 run summon skeleton_horse ^ ^ ^2.8 {Tags:["Temp.Start","Mob.SledMob","Mob.SledMob.Main"],NoGravity:1b,Silent:1b,NoAI:1b,Invulnerable:1b,DeathLootTable:"minecraft:empty",Passengers:[{id:"minecraft:skeleton",Tags:["Temp.Start","Mob.SledMob","Mob.SledMob.Sub1"],NoGravity:1b,Silent:1b,NoAI:1b,Invulnerable:1b,DeathLootTable:"minecraft:empty",ArmorItems:[{},{},{},{id:"minecraft:black_dye",Count:1b,tag:{CustomModelData:30}}]}]}
     execute as @e[type=skeleton_horse,tag=Temp.Start] positioned as @s run tp @s ~ ~ ~ ~ ~
     team join NoCollition @e[type=skeleton_horse,tag=Temp.Start]
 

@@ -32,15 +32,22 @@
     scoreboard players set #game_manager game.team_score.blue 0
     scoreboard players set #game_manager game.team_score.green 0
     scoreboard players set #game_manager game.team_score.yellow 0
+    scoreboard players operation #game_manager game.item_timer = #game_manager game.setting.max_item_timer
+    scoreboard players set #game_manager game.item_spawn_random 30
 
 # プレイヤースコア設定
     scoreboard players set @a player.invulnerable_timer 100
     scoreboard players set @a player.sled_summon_count 3
+    scoreboard players set @a player.item.having 0
 
 # スコア表示
     execute unless score #game_manager game.setting.is_life matches 1.. unless score #game_manager game.setting.is_team matches 1.. run function santa_battle_core:game_main/phase3/start_battleroyale
     execute unless score #game_manager game.setting.is_life matches 1.. if score #game_manager game.setting.is_team matches 1.. run function santa_battle_core:game_main/phase3/start_team
     execute if score #game_manager game.setting.is_life matches 1.. run function santa_battle_core:game_main/phase3/start_life
+
+# アイテム出現位置決定
+    # TODO:位置の更新
+    summon marker 330 74 -20 {Tags:["Mob.ItemPointMarker"]}
 
 # バトルフィールドに移動
     execute as @a[tag=Player.GhostTeam] run tag @s add Player.Ghost
