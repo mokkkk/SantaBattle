@@ -11,6 +11,14 @@
     execute if predicate santa_battle_core:player/interaction/chicken run title @s actionbar {"text": "「曲がりにくいが、スピードも加速もトップクラス。しかしスタミナが無いため、すぐに疲れる。」","color": "aqua","bold": true}
     execute if predicate santa_battle_core:player/interaction/skeleton run title @s actionbar {"text": "「かつてサンタだった者たち。曲がりやすく，スピードも最速だが，急に角度を変えるとへそを曲げる。」","color": "aqua","bold": true}
     execute if predicate santa_battle_core:player/interaction/random run title @s actionbar {"text": "「なんだかよくわからない生物。召喚のたびに性能がランダムで変わる。」","color": "aqua","bold": true}
+    execute if predicate santa_battle_core:player/interaction/goat at @e[type=interaction,tag=vaDisplay_Animal_Goat] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/allay at @e[type=interaction,tag=vaDisplay_Animal_Allay] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/sniffer at @e[type=interaction,tag=vaDisplay_Animal_Sniffer] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/dolphine at @e[type=interaction,tag=vaDisplay_Animal_Dolphine] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/wolf at @e[type=interaction,tag=vaDisplay_Animal_Wolf] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/chicken at @e[type=interaction,tag=vaDisplay_Animal_Chicken] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/skeleton at @e[type=interaction,tag=vaDisplay_Animal_Skeleton] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
+    execute if predicate santa_battle_core:player/interaction/random at @e[type=interaction,tag=vaDisplay_Animal_Random] run particle electric_spark ~ ~0.6 ~ 0.2 0.2 0.2 0 1 normal @s
 
 # 設定のヘルプ
     execute if predicate santa_battle_core:player/interaction/start run title @s actionbar {"text": "「試合を始める。覚悟の準備をしておいてください。」","color": "aqua","bold": true}
