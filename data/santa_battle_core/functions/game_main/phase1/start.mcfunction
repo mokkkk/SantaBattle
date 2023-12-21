@@ -10,7 +10,7 @@
     execute as @a run function santa_battle_core:game_main/phase1/start_player
     scoreboard objectives setdisplay sidebar
     execute as @e[type=interaction] run data remove entity @s interaction
-    # kill @e[type=marker,tag=Mob.ItemPointMarker]
+    tag @e[type=marker,tag=Mob.ItemPointMarker] remove Mob.ItemPointMarker.Disabled
 
 # ロビーに戻す
     gamemode adventure @a

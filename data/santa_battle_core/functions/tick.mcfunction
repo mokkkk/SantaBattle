@@ -15,6 +15,7 @@
     execute as @e[type=marker,tag=Mob.ParticleMarker] at @s run function santa_battle_core:other/marker_particle
     execute as @e[type=marker,tag=Mob.FootingMarker] at @s run function santa_battle_core:other/footing/tick
     execute as @e[type=item_display,tag=Mob.ItemEntity] at @s run function santa_battle_core:other/item/tick
+    execute as @e[type=item_display,tag=Mob.SpBox] at @s run function santa_battle_core:other/spbox/tick
     # リードが残るバグ対策
         kill @e[type=item,nbt={Item:{id:"minecraft:lead"}}]
     # バトルフィールドの雪演出

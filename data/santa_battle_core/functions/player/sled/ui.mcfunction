@@ -8,6 +8,7 @@
     execute if score @s player.item.having matches 2 run data modify storage santa_battle_core: Temp.Ui.Item set value '{"text":"CAKE   ","color":"#78ff81"}'
     execute if score @s player.item.having matches 3 run data modify storage santa_battle_core: Temp.Ui.Item set value '{"text":"STAR   ","color":"#fff678"}'
     execute if score @s player.item.having matches 4 run data modify storage santa_battle_core: Temp.Ui.Item set value '{"text":"CRUCKER","color":"#ffaa78"}'
+    execute if score @s player.item.having matches 5 run data modify storage santa_battle_core: Temp.Ui.Item set value '{"text":"SP.BOX  ","color":"#e078ff"}'
 
 # ソリの残り回数
     execute if score @s player.sled_summon_count matches 3.. run data modify storage santa_battle_core: Temp.Ui.SledCount set value '[{"text":"⭐⭐⭐","color":"gold"}]'

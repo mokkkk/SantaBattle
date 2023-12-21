@@ -5,6 +5,8 @@
 # 確率でスポーン
     execute store result score #temp_random temp run random value 0..100
     execute if score #temp_random temp <= #game_manager game.item_spawn_random positioned as @e[type=marker,tag=Mob.ItemPointMarker,tag=!Mob.ItemPointMarker.Disabled,limit=1,sort=random] run function santa_battle_core:other/item/summon
+    execute store result score #temp_random temp run random value 0..100
+    execute if score #temp_random temp <= #game_manager game.item_spawn_random positioned as @e[type=marker,tag=Mob.ItemPointMarker,tag=!Mob.ItemPointMarker.Disabled,limit=1,sort=random] run function santa_battle_core:other/item/summon
 
 # 確率上昇
     scoreboard players add #game_manager game.item_spawn_random 15
