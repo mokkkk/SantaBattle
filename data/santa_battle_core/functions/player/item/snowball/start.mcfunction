@@ -15,6 +15,13 @@
 # アイテム
     # TNT
         execute if score @s player.item.having matches 1 run function santa_battle_core:player/item/snowball/1_tnt/m_start with storage santa_battle_core: Temp
+    # ケーキ
+        execute if score @s player.item.having matches 2 run function santa_battle_core:player/item/snowball/2_cake/start with storage santa_battle_core: Temp
+    # 星
+        execute if score @s player.item.having matches 3 run function santa_battle_core:player/item/snowball/3_star/start with storage santa_battle_core: Temp
+    # クラッカー
+        execute if score @s player.item.having matches 4 run function santa_battle_core:player/item/snowball/4_cracker/start with storage santa_battle_core: Temp
+
 
 # ソリをわずかに減速
     execute if entity @s[tag=Player.OnSled] run scoreboard players operation @s player.sled_status.current_speed -= @s player.sled_status.attack_deceleration

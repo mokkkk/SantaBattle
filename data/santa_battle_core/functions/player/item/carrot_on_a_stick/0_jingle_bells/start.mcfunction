@@ -38,6 +38,7 @@
     execute rotated ~ 0 positioned ^ ^1 ^2 run function santa_battle_core:player/item/carrot_on_a_stick/0_jingle_bells/effect
 
 # 終了
+    execute if score @s player.item.using.crucker matches 1.. run scoreboard players set @s player.item.using.crucker 0
     tag @e[tag=Temp.Start] remove Temp.Start
     scoreboard players set @s SvPlayerTimer 0
     tag @s add Player.OnSled

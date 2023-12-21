@@ -3,13 +3,16 @@
 # ソリのメイン処理
 
 # アイテム
-    execute unless score @s player.item.having matches 1.. run data modify storage santa_battle_core: Temp.Ui.Item set value '{"text":"NONE","color":"white"}'
-    execute if score @s player.item.having matches 1 run data modify storage santa_battle_core: Temp.Ui.Item set value '{"text":" TNT","color":"red"}'
+    execute unless score @s player.item.having matches 1.. run data modify storage santa_battle_core: Temp.Ui.Item set value '{"text":"NONE   ","color":"white"}'
+    execute if score @s player.item.having matches 1 run data modify storage santa_battle_core: Temp.Ui.Item set value '{"text":"TNT    ","color":"#ff7d7f"}'
+    execute if score @s player.item.having matches 2 run data modify storage santa_battle_core: Temp.Ui.Item set value '{"text":"CAKE   ","color":"#78ff81"}'
+    execute if score @s player.item.having matches 3 run data modify storage santa_battle_core: Temp.Ui.Item set value '{"text":"STAR   ","color":"#fff678"}'
+    execute if score @s player.item.having matches 4 run data modify storage santa_battle_core: Temp.Ui.Item set value '{"text":"CRUCKER","color":"#ffaa78"}'
 
 # ソリの残り回数
-    execute if score @s player.sled_summon_count matches 3.. run data modify storage santa_battle_core: Temp.Ui.SledCount set value '[{"text":"★★★","color":"gold"}]'
-    execute if score @s player.sled_summon_count matches 2 run data modify storage santa_battle_core: Temp.Ui.SledCount set value '[{"text":"★★","color":"gold"},{"text":"★","color":"gray"}]'
-    execute if score @s player.sled_summon_count matches ..1 run data modify storage santa_battle_core: Temp.Ui.SledCount set value '[{"text":"★","color":"gold"},{"text":"★★","color":"gray"}]'
+    execute if score @s player.sled_summon_count matches 3.. run data modify storage santa_battle_core: Temp.Ui.SledCount set value '[{"text":"⭐⭐⭐","color":"gold"}]'
+    execute if score @s player.sled_summon_count matches 2 run data modify storage santa_battle_core: Temp.Ui.SledCount set value '[{"text":"⭐⭐","color":"gold"},{"text":"⭐","color":"gray"}]'
+    execute if score @s player.sled_summon_count matches ..1 run data modify storage santa_battle_core: Temp.Ui.SledCount set value '[{"text":"⭐","color":"gold"},{"text":"⭐⭐","color":"gray"}]'
 
 # 時速計算
     scoreboard players operation #km_h const = @s player.sled_status.current_speed

@@ -28,3 +28,4 @@
 # アイテムの有効タイマー減少
     execute if score @s player.item.count matches 1..1000 run scoreboard players remove @s player.item.count 1
     execute if score @s player.item.count matches ..0 run scoreboard players set @s player.item.having 0
+    execute if score @s player.item.using.crucker matches 1.. run scoreboard players remove @s player.item.using.crucker 1
