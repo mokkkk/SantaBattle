@@ -21,4 +21,4 @@
     execute if entity @a[tag=!Player.Ghost,distance=..2.5] run function santa_battle_core:other/spbox/pickup_by_player
 
 # 消去
-    execute if score @s player.timer matches 300.. run kill @s
+    execute if score @s player.timer matches 600.. run kill @s
