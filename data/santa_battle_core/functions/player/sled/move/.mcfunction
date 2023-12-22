@@ -5,7 +5,7 @@
 # 速度計算
     scoreboard players operation @s player.sled_status.current_speed += @s player.sled_status.acceleration
     execute if score @s player.sled_status.current_speed > @s player.sled_status.max_speed run scoreboard players operation @s player.sled_status.current_speed = @s player.sled_status.max_speed
-    execute if score @s player.item.using.cake matches 1.. run scoreboard players set @s player.sled_status.current_speed 4000
+    execute if score @s player.item.using.cake matches 1.. run scoreboard players set @s player.sled_status.current_speed 2800
     execute if score @s player.item.using.cake matches 1.. run scoreboard players remove @s player.item.using.cake 1
     scoreboard players operation @e[tag=Mob.SledMob.Main,tag=Temp.Target] player.sled_status.current_speed = @s player.sled_status.current_speed
 # storageにステータスを保存

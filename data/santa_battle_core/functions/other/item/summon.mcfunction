@@ -3,7 +3,7 @@
 # アイテム用markerの処理
 
 # アイテムIDの付与
-    execute store result score #temp_random temp run random value 1..5
+    execute store result score #temp_random temp run random value 1..6
     scoreboard players set #temp_cmd temp 100
     execute store result storage santa_battle_core: Temp.Cmd int 1 run scoreboard players operation #temp_cmd temp += #temp_random temp
 

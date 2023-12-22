@@ -25,7 +25,7 @@
     execute as @a[tag=Temp.Hit] unless score @s player.id = #temp player.id run function santa_battle_core:bullet/general/hit
 
 # 爆発
-    execute if entity @s[tag=Bullet.IsHitBlock] run particle explosion_emitter ~ ~ ~ 0 0 0 0 1
+    execute if entity @s[tag=Bullet.IsHitBlock] run particle explosion_emitter ~ ~ ~ 0 0 0 0 1 force
     execute if entity @s[tag=Bullet.IsHitBlock] run playsound entity.generic.explode master @a ~ ~ ~ 1.5 0.7
 
 # 終了

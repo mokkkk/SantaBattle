@@ -17,6 +17,7 @@
     execute if score @s player.sled_summon_count matches ..0 if score #game_manager game.phase matches 1 run scoreboard players set @s player.sled_summon_count 3
 
 # storageにステータスを保存
+    execute if score @s player.sled_status.current_speed matches 2000.. run scoreboard players set @s player.sled_status.current_speed 1500
     execute store result storage santa_battle_core: Temp.Speed float 0.001 run scoreboard players get @s player.sled_status.current_speed
 
 # プレイヤー移動

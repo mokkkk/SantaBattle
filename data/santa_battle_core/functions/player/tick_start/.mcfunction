@@ -10,7 +10,7 @@
 
 # 無敵時間処理
     # 無敵エフェクト
-        execute if entity @s[tag=!Player.Ghost] unless score #game_manager game.phase matches 4 if score @s player.invulnerable_timer matches 1.. run particle composter ~ ~1 ~ 0.5 0.8 0.5 0 1 force
+        execute if entity @s[tag=!Player.Ghost] unless score #game_manager game.phase matches 4 if score @s player.invulnerable_timer matches 1.. run particle electric_spark ~ ~1 ~ 0.2 0.4 0.2 1 15 force
     # 減算
         execute if score @s player.invulnerable_timer matches 1.. run scoreboard players remove @s player.invulnerable_timer 1
 
@@ -24,6 +24,9 @@
 # ロビー中処理
     execute if score #game_manager game.phase matches 1 unless score #game_manager game.setting.is_team matches 1.. run function santa_battle_core:player/tick_start/on_phase_1
     execute if score #game_manager game.phase matches 1 if score #game_manager game.setting.is_team matches 1.. run function santa_battle_core:player/tick_start/on_phase_1_team
+
+# バトル中処理
+    execute if score #game_manager game.phase matches 3 run effect give @s glowing 1 0 true
 
 # アイテムの有効タイマー減少
     execute if score @s player.item.count matches 1..1000 run scoreboard players remove @s player.item.count 1
