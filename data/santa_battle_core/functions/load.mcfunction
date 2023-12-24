@@ -31,6 +31,8 @@
         scoreboard objectives add player.game_phase dummy
         scoreboard objectives add player.item.having dummy
         scoreboard objectives add player.item.count dummy
+        scoreboard objectives add player.item.using.cake dummy
+        scoreboard objectives add player.item.using.crucker dummy
     # 弾の処理用
         scoreboard objectives add bullet.timer dummy
         scoreboard objectives add bullet.status.speed_x dummy

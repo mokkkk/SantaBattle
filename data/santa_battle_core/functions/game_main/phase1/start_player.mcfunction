@@ -17,6 +17,6 @@
 
 # ロビーに戻す
     gamemode adventure @s
-    tp @s 56.0 -59 16.0
-    spawnpoint @s 56 -59 16
-    setworldspawn 56 -59 16
+    tp @s 87 84 15 270 0
+    spawnpoint @s 87 84 15
+    setworldspawn 87 84 15 270

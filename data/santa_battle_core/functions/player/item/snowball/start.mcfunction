@@ -15,13 +15,23 @@
 # アイテム
     # TNT
         execute if score @s player.item.having matches 1 run function santa_battle_core:player/item/snowball/1_tnt/m_start with storage santa_battle_core: Temp
+    # ケーキ
+        execute if score @s player.item.having matches 2 run function santa_battle_core:player/item/snowball/2_cake/start with storage santa_battle_core: Temp
+    # 星
+        execute if score @s player.item.having matches 3 run function santa_battle_core:player/item/snowball/3_star/start with storage santa_battle_core: Temp
+    # クラッカー
+        execute if score @s player.item.having matches 4 run function santa_battle_core:player/item/snowball/4_cracker/start with storage santa_battle_core: Temp
+    # びっくり箱
+        execute if score @s player.item.having matches 5 run function santa_battle_core:player/item/snowball/5_spbox/start with storage santa_battle_core: Temp
+    # 煙幕
+        execute if score @s player.item.having matches 6 run function santa_battle_core:player/item/snowball/6_smoke/start with storage santa_battle_core: Temp
 
 # ソリをわずかに減速
     execute if entity @s[tag=Player.OnSled] run scoreboard players operation @s player.sled_status.current_speed -= @s player.sled_status.attack_deceleration
     execute if entity @s[tag=Player.OnSled] if score @s player.sled_status.current_speed < @s player.sled_status.min_speed run scoreboard players operation @s player.sled_status.current_speed = @s player.sled_status.min_speed
 
 # 雪玉補充
-    give @s snowball 1
+    give @s snowball{display:{Name:'{"text":"プレゼントボックス","color":"red","italic":false}',Lore:['{"text":"サンタの基本装備．","italic":false}','{"text":"子供たちに夢を与えることもできるし，","italic":false}','{"text":"競合他者を撃ち落とすこともできる．","italic":false}','{"text":"拾ったものを入れておくこともできる．","italic":false}']}} 1
 
 # 終了
     data remove storage santa_battle_core: Temp

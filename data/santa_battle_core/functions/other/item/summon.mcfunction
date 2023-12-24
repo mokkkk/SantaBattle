@@ -2,9 +2,8 @@
 #
 # アイテム用markerの処理
 
-# TODO:アイテムIDの付与
-    # execute store result score #temp_random temp run random roll 0..5
-    scoreboard players set #temp_random temp 1
+# アイテムIDの付与
+    execute store result score #temp_random temp run random value 1..6
     scoreboard players set #temp_cmd temp 100
     execute store result storage santa_battle_core: Temp.Cmd int 1 run scoreboard players operation #temp_cmd temp += #temp_random temp
 
@@ -24,4 +23,4 @@
     scoreboard players reset #temp_random
     data remove storage santa_battle_core: Temp
 
-say item_summoned
+# say item_summoned

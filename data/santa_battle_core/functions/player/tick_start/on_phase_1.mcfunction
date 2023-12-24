@@ -4,3 +4,4 @@
 
 # チーム参加・参加解除
     team leave @s
+    execute if entity @s[tag=Player.GhostTeam] run team join ghostTeam @s

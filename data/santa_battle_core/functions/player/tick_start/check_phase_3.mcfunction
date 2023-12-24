@@ -15,8 +15,8 @@
     tag @s add Player.Ghost
     tag @s add Player.Visitor
     gamemode spectator @s
-    tp @s 319 136 15
-    spawnpoint @s 319 136 15
+    tp @s 319 196 15
+    spawnpoint @s 319 196 15
 
 # phase更新
     scoreboard players set @s player.game_phase 3

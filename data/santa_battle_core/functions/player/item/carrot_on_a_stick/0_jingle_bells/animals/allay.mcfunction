@@ -14,8 +14,8 @@
 # ステータス設定
     scoreboard players set @s player.sled_status.min_speed 100
     scoreboard players set @s player.sled_status.current_speed 100
-    scoreboard players set @s player.sled_status.max_speed 1600
-    scoreboard players set @s player.sled_status.acceleration 10
+    scoreboard players set @s player.sled_status.max_speed 2000
+    scoreboard players set @s player.sled_status.acceleration 13
     scoreboard players set @s player.sled_status.attack_deceleration 50
     scoreboard players set @s player.sled_status.handling 6000
 
